@@ -7,7 +7,7 @@ import sys
 pygame.init()
 
 # Configuración de la ventana
-ANCHO, ALTO = 800, 600
+ANCHO, ALTO = 1800, 900
 VENTANA = pygame.display.set_mode((ANCHO, ALTO))
 pygame.display.set_caption("Ruleta de Casino")
 
@@ -18,8 +18,8 @@ ROJO = (255, 0, 0)
 VERDE = (0, 255, 0)
 
 # Configuración de la ruleta
-CENTRO = (ANCHO // 2, ALTO // 2)
-RADIO = 200
+CENTRO = (260,260)
+RADIO = 210
 NUMEROS = 37  # Del 0 al 36
 
 # Crear los números y colores de la ruleta
