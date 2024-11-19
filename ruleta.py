@@ -108,12 +108,20 @@ def dibujar_ruleta(angulo_actual):
     pygame.draw.polygon(
         screen,
         RED,
-        [(CENTRO[0], CENTRO[1] - RADIO - 10), (CENTRO[0] - 10, CENTRO[1] - RADIO - 30), (CENTRO[0] + 10, CENTRO[1] - RADIO - 30)],
+        [
+            (CENTRO[0]     , CENTRO[1] - RADIO - 10), 
+            (CENTRO[0] - 10, CENTRO[1] - RADIO - 30), 
+            (CENTRO[0] + 10, CENTRO[1] - RADIO - 30)
+        ]
     )
     pygame.draw.polygon(
         screen,
         BLACK,
-        [(CENTRO[0], CENTRO[1] - RADIO - 10), (CENTRO[0] - 10, CENTRO[1] - RADIO - 30), (CENTRO[0] + 10, CENTRO[1] - RADIO - 30)],
+        [
+            (CENTRO[0]     , CENTRO[1] - RADIO - 10), 
+            (CENTRO[0] - 10, CENTRO[1] - RADIO - 30), 
+            (CENTRO[0] + 10, CENTRO[1] - RADIO - 30)
+        ],
         3
     )
 
@@ -147,6 +155,21 @@ def dibujar_ruleta(angulo_actual):
             (CENTRO[0] - RADIO - 30, CENTRO[1]     ),
             (CENTRO[0] - RADIO - 20, CENTRO[1] + 15),
         ],
+    )
+
+    pygame.draw.line(
+        screen, 
+        GOLDEN, 
+        (CENTRO[0]-89,CENTRO[1]+89), 
+        (CENTRO[0]+89,CENTRO[1]-89),
+        4
+    )
+    pygame.draw.line(
+        screen, 
+        GOLDEN, 
+        (CENTRO[0]+89,CENTRO[1]+89), 
+        (CENTRO[0]-89,CENTRO[1]-89),
+        4
     )
 
     #SECTORES Y DECORACION

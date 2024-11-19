@@ -1,7 +1,6 @@
 import re
 import math
 import subprocess
-from IPython.display import display, Markdown
 
 def show_code(file_path, function_name=None):
     """
@@ -68,8 +67,7 @@ def show_code(file_path, function_name=None):
         content = content.rstrip()
         
         # Mostra el codi formatat
-        display(Markdown(f'```python\n{content}\n```'))
-        
+
     except FileNotFoundError:
         print(f"Error: No s'ha trobat el fitxer '{file_path}'")
     except Exception as e:
