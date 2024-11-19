@@ -12,18 +12,20 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
+DARK_GREEN = (0, 128, 0)
 BLUE  = (0, 0, 255)
 PURPLE = (128, 0, 128)
 ORANGE = (255, 165, 0) 
+GOLD = (255, 215, 0)
 
 pygame.init()
 clock = pygame.time.Clock()
 
 # Definir la finestra
-screen = pygame.display.set_mode((640, 480))
-pygame.display.set_caption('Window Title')
+screen = pygame.display.set_mode((1800, 900))
+pygame.display.set_caption('Ruleta de Casino')
 
-#Listas y variables
+# Listas y variables
 casillas = {
     "0":{
         "num": 0,
@@ -174,6 +176,8 @@ casillas = {
         "color": "negro",
     }
 }
+# Puntos tablero
+puntos_tablero = [(470,50),(470,350)]
 # Bucle de l'aplicació
 def main():
     is_looping = True
@@ -204,14 +208,16 @@ def app_run():
 def app_draw():
     
     # Pintar el fons de blanc
+    # QUITAR AL ACABAR EL TRABAJO 
+    # screen.fill(DARK_GREEN)
     screen.fill(WHITE)
 
     # Dibuixar la graella
     utils.draw_grid(pygame, screen, 50)
 
     # Resol aquí l'exercici
-    pass
-
+    pygame.draw.circle(screen, GOLD, (260,260), 210, 5)
+    pygame.draw.polygon(screen, BLACK, puntos_tablero,5)
     # Actualitzar el dibuix a la finestra
     pygame.display.update()
 
