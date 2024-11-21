@@ -281,4 +281,4 @@ def ruleta(angulo_inicial):
     ultimo_angulo = angulo % 360  # Guardar el último ángulo
     ganador_idx = (int(NUMEROS - (ultimo_angulo) / (360 / NUMEROS))) % NUMEROS
     ganador = orden_ruleta[ganador_idx]
-    return casillas[ganador]["num"]
+    return casillas[ganador]["num"], ultimo_angulo

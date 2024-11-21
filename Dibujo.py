@@ -3,12 +3,11 @@ os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
 import sys
 import utils
-from Datos import screen
+from Datos import *
 pygame.init()
-from Ruleta_2 import *
+from Ruleta import ruleta, dibujar_ruleta, ultimo_angulo
 
 clock = pygame.time.Clock()
-ultimo_angulo = 0
 
 # Definir la finestra
 pygame.display.set_caption('Window Title')
@@ -34,7 +33,8 @@ def app_events():
             return False
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
-                ganador = ruleta(ultimo_angulo)
+                global ultimo_angulo
+                ganador, ultimo_angulo = ruleta(ultimo_angulo)
                 print(f"¡El número ganador es: {ganador}!")
     return True
 
@@ -44,7 +44,6 @@ def app_run():
 
 # Dibuixar
 def app_draw():
-    global ultimo_angulo
 
     # Pintar el fons de blanc
     screen.fill(WHITE)
