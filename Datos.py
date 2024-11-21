@@ -59,6 +59,8 @@ casillas = {
 
 CENTRO = (300,300)
 RADIO = 210
+ultimo_angulo = 0
+
 orden_ruleta = [
     "0" , "32", "15", "19", "4", "21" , 
     "2" , "25", "17", "34", "6", "27" ,
@@ -75,4 +77,6 @@ boton_radio_ruleta = 50
 
 NUMEROS = len(orden_ruleta)
 
-boton_presionado = False
+arial18 = pygame.font.SysFont("Arial", 18, True)
+
+clock = pygame.time.Clock()

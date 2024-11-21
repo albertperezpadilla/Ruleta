@@ -4,8 +4,6 @@ import pygame
 import sys
 from Datos import * 
 
-arial18 = pygame.font.SysFont("Arial", 18, True)
-ultimo_angulo = 0
 
 def rotate_point(x, y, cx, cy):
     # Aplica las fórmulas de rotación
@@ -259,44 +257,53 @@ def dibujar_ruleta(angulo_actual):
         6
     )
 
-def ruleta(angulo_inicial):
-    angulo = angulo_inicial
-    velocidad = random.uniform(10, 20)
-    desaceleracion = 0.04
-
-    while velocidad > 0:
-        for evento in pygame.event.get():
-            if evento.type == pygame.QUIT:
-                pygame.quit()
-                sys.exit()
-
-        angulo += velocidad
-        velocidad -= desaceleracion
-
-        dibujar_ruleta(angulo % 360)
-        pygame.display.flip()
-        pygame.time.delay(30)
-
-    global ultimo_angulo
-    ultimo_angulo = angulo % 360  # Guardar el último ángulo
-    ganador_idx = (int(NUMEROS - (ultimo_angulo) / (360 / NUMEROS))) % NUMEROS
-    ganador = orden_ruleta[ganador_idx]
-    return casillas[ganador]["num"], ultimo_angulo
-
-def dibuar_boton_ruleta():
-
-
-    color_boton = DARK_RED if boton_presionado else RED
-
+def dibuar_boton_ruleta(color):
     pygame.draw.circle(
         screen, 
-        RED, 
+        color, 
         (
             boton_x_ruleta, 
             boton_y_ruleta
         ), 
         boton_radio_ruleta
     )
+    pygame.draw.circle(
+        screen, 
+        GOLDEN, 
+        (
+            boton_x_ruleta, 
+            boton_y_ruleta
+        ), 
+        boton_radio_ruleta,
+        7
+    )
+
     texto = arial18.render("GIRAR", True, WHITE)
     texto_rect = texto.get_rect(center=(boton_x_ruleta, boton_y_ruleta))
     screen.blit(texto, texto_rect)
+
+def ruleta(angulo_inicial):
+    global ultimo_angulo
+
+    angulo = angulo_inicial
+    velocidad = random.uniform(10, 20)
+    desaceleracion = 0.04
+    while velocidad > 0:
+        for evento in pygame.event.get():
+            if evento.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            
+        angulo += velocidad
+        velocidad -= desaceleracion
+
+        dibujar_ruleta(angulo % 360)
+        dibuar_boton_ruleta(DARK_RED)
+
+        pygame.display.flip()
+        pygame.time.delay(30)
+    
+    ultimo_angulo = angulo % 360  # Guardar el último ángulo
+    ganador_idx = (int(NUMEROS - (ultimo_angulo) / (360 / NUMEROS))) % NUMEROS
+    ganador = orden_ruleta[ganador_idx]
+    return casillas[ganador]["num"], ultimo_angulo
