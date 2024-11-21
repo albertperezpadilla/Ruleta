@@ -69,4 +69,10 @@ orden_ruleta = [
     "26"
 ]
 
+boton_x_ruleta = 550
+boton_y_ruleta = 500
+boton_radio_ruleta = 50
+
 NUMEROS = len(orden_ruleta)
+
+boton_presionado = False

@@ -261,8 +261,8 @@ def dibujar_ruleta(angulo_actual):
 
 def ruleta(angulo_inicial):
     angulo = angulo_inicial
-    velocidad = random.uniform(5, 15)
-    desaceleracion = 0.02
+    velocidad = random.uniform(10, 20)
+    desaceleracion = 0.04
 
     while velocidad > 0:
         for evento in pygame.event.get():
@@ -282,3 +282,21 @@ def ruleta(angulo_inicial):
     ganador_idx = (int(NUMEROS - (ultimo_angulo) / (360 / NUMEROS))) % NUMEROS
     ganador = orden_ruleta[ganador_idx]
     return casillas[ganador]["num"], ultimo_angulo
+
+def dibuar_boton_ruleta():
+
+
+    color_boton = DARK_RED if boton_presionado else RED
+
+    pygame.draw.circle(
+        screen, 
+        RED, 
+        (
+            boton_x_ruleta, 
+            boton_y_ruleta
+        ), 
+        boton_radio_ruleta
+    )
+    texto = arial18.render("GIRAR", True, WHITE)
+    texto_rect = texto.get_rect(center=(boton_x_ruleta, boton_y_ruleta))
+    screen.blit(texto, texto_rect)
