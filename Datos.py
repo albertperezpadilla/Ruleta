@@ -2,30 +2,33 @@ import pygame
 pygame.init()
 
 #JUEGO
-import ctypes
-ctypes.windll.user32.SetProcessDPIAware()
+
 
 screen = pygame.display.set_mode((1800, 900))
 clock = pygame.time.Clock()
 
 #COLORES
-WHITE        = (255, 255, 255)
-BLACK        = (0  , 0  , 0  )
-RED          = (255, 0  , 0  )
-DARK_RED     = (150, 0  , 0  )
-MID_DARK_RED = (185, 0  , 0  )
-GREEN        = (0  , 230, 0  )
-DARK_GREEN   = (45 , 87 , 44 )
-BROWN        = (135, 80 , 20 )
-GOLDEN       = (239, 184, 16 )
-BLUE         = (0  , 0  , 255)
-PURPLE       = (128, 0  , 128)
-ORANGE       = (255, 165, 0  )
+WHITE          = (255, 255, 255)
+BLACK          = (0  , 0  , 0  )
+RED            = (255, 0  , 0  )
+DARK_RED       = (150, 0  , 0  )
+MID_DARK_RED   = (185, 0  , 0  )
+GREEN          = (0  , 230, 0  )
+DARK_GREEN     = (45 , 87 , 44 )
+BROWN          = (135, 80 , 20 )
+GOLDEN         = (239, 184, 16 )
+ORANGE         = (255, 165, 0  )
+PURPLE         = (128, 0  , 128)
+BLUE           = (0  , 70 , 255)
+DARK_ORANGE    = (200, 110, 0  )
+DARK_PURPLE    = (73 , 0  , 73 )
+DARK_BLUE      = (0  , 0  , 200)
 
 #FUENTES DE TEXTO
 arial55 = pygame.font.SysFont("Arial", 55)
 arial40 = pygame.font.SysFont("Arial", 40)
 arial35 = pygame.font.SysFont("Arial", 35)
+arial30 = pygame.font.SysFont("Arial", 30, True)
 arial18 = pygame.font.SysFont("Arial", 18, True)
 
 #CASILLAS
@@ -69,7 +72,13 @@ casillas = {
     "36": {"num":36, "color":RED  , "pos_ini":()}
 }
 
-
+#JUGADORES
+jugadores = {
+    "0": {"jugador":"Naranja", "saldo":100, "color":ORANGE     , "color_2":DARK_ORANGE    },
+    "1": {"jugador":"Lila"   , "saldo":100, "color":PURPLE     , "color_2":DARK_PURPLE    },
+    "2": {"jugador":"Azul"   , "saldo":100, "color":BLUE       , "color_2":DARK_BLUE      },
+    "3": {"jugador":"Banca"  , "saldo":0  , "color":DARK_GREEN , "color_2":WHITE }
+}
 
 #RULETA
 CENTRO = (300,300)

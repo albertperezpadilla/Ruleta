@@ -8,6 +8,7 @@ pygame.init()
 from Datos import *
 from Ruleta import ruleta, dibujar_ruleta, dibuar_boton_ruleta
 from Tablero import dibujar_tablero
+from Jugadores import dibujar_jugador
 
 
 # Definir la finestra
@@ -61,6 +62,7 @@ def app_draw():
     dibuar_boton_ruleta(RED)
     dibujar_ruleta(ultimo_angulo)  # Mostrar la ruleta al inicio
     dibujar_tablero()
+    dibujar_jugador()
 
     # Actualitzar el dibuix a la finestra
     pygame.display.update()
