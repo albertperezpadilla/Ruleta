@@ -12,8 +12,6 @@ def rotate_point(x, y, cx, cy):
     return (x_new, y_new)
 
 def dibujar_ruleta(angulo_actual):
-    arial18 = pygame.font.SysFont("Arial", 18, True)
-
     #EXTERIOR
     pygame.draw.circle(
         screen, 
@@ -174,7 +172,7 @@ def dibujar_ruleta(angulo_actual):
     #MARCADOR
     pygame.draw.polygon(
         screen,
-        DARK_RED,
+        MID_DARK_RED,
         [
             (CENTRO[0] + RADIO - 10, CENTRO[1]     ), 
             (CENTRO[0] + RADIO + 45, CENTRO[1] - 20), 

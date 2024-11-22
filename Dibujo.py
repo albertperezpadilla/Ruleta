@@ -3,10 +3,10 @@ import math
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
 import sys
-import utils
 pygame.init()
 from Datos import *
 from Ruleta import ruleta, dibujar_ruleta, dibuar_boton_ruleta
+from Tablero import dibujar_tablero
 
 
 # Definir la finestra
@@ -51,14 +51,15 @@ def app_run():
 def app_draw():
 
     # Pintar el fons de blanc
-    screen.fill(WHITE)
+    screen.fill(DARK_GREEN)
 
     # Dibuixar la graella
-    utils.draw_grid(pygame, screen, 50)
+    #utils.draw_grid(pygame, screen, 50)
 
     # Resol aquí l'exercici
     dibuar_boton_ruleta(RED)
     dibujar_ruleta(ultimo_angulo)  # Mostrar la ruleta al inicio
+    dibujar_tablero()
 
     # Actualitzar el dibuix a la finestra
     pygame.display.update()
