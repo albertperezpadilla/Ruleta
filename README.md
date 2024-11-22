@@ -1,1 +1,1 @@
-No me quites el readme puto :(
+odio python
