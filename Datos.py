@@ -2,6 +2,9 @@ import pygame
 pygame.init()
 
 #JUEGO
+import ctypes
+ctypes.windll.user32.SetProcessDPIAware()
+
 screen = pygame.display.set_mode((1800, 900))
 clock = pygame.time.Clock()
 
@@ -106,3 +109,7 @@ for row in orden_tablero:
     row_cont += 1
 puntos_tablero = [(710, 50), (1750, 50), (1750, 350), (1670, 350), (1670, 550), (710, 550)]
 puntos_0 = [(710, 50), (630, 50), (600, 200), (630, 350), (710, 350)]
+
+#Superficie
+surface = pygame.Surface((500, 500), pygame.SRCALPHA)  
+surface.fill((200, 200, 200)) # Fons gris
