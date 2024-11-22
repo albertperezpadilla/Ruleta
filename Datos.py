@@ -9,18 +9,15 @@ clock = pygame.time.Clock()
 WHITE        = (255, 255, 255)
 BLACK        = (0  , 0  , 0  )
 RED          = (255, 0  , 0  )
-GREEN        = (0  , 255, 0  )
-BLUE         = (0  , 0  , 255)
-PURPLE       = (128, 0  , 128)
-ORANGE       = (255, 165, 0  ) 
-YELLOW       = (255, 255, 0  )
-BROWN        = (135, 80 , 20 )
-GOLDEN       = (239, 184, 16 )
-DARK_GREEN   = (45 , 87 , 44 )
-DARK_GRAY    = (51 , 47 , 44 )
 DARK_RED     = (150, 0  , 0  )
 MID_DARK_RED = (185, 0  , 0  )
-GRAY         = (130, 130, 130)
+GREEN        = (0  , 230, 0  )
+DARK_GREEN   = (45 , 87 , 44 )
+BROWN        = (135, 80 , 20 )
+GOLDEN       = (239, 184, 16 )
+BLUE         = (0  , 0  , 255)
+PURPLE       = (128, 0  , 128)
+ORANGE       = (255, 165, 0  )
 
 #FUENTES DE TEXTO
 arial55 = pygame.font.SysFont("Arial", 55)
@@ -85,7 +82,7 @@ orden_ruleta = [
     "26"
 ]
 NUMEROS = len(orden_ruleta)
-boton_x_ruleta = 550
+boton_x_ruleta = 500
 boton_y_ruleta = 500
 boton_radio_ruleta = 50
 

@@ -11,6 +11,7 @@ def dibujar_tablero():
     for i in range(0,len(casillas)-1):
         pygame.draw.rect(screen, casillas[str(i+1)]["color"], (casillas[str(i+1)]["pos_ini"][0], casillas[str(i+1)]["pos_ini"][1], 80, 100))
     pygame.draw.polygon(screen, WHITE, puntos_tablero,5)
+    pygame.draw.polygon(screen, GREEN, puntos_0,)
     pygame.draw.polygon(screen, WHITE, puntos_0, 5)
 
     # Lineas horizontales

@@ -273,7 +273,7 @@ def dibuar_boton_ruleta(color):
             boton_y_ruleta
         ), 
         boton_radio_ruleta,
-        7
+        8
     )
 
     texto = arial18.render("GIRAR", True, WHITE)
@@ -294,9 +294,10 @@ def ruleta(angulo_inicial):
             
         angulo += velocidad
         velocidad -= desaceleracion
-
-        dibujar_ruleta(angulo % 360)
+        
         dibuar_boton_ruleta(DARK_RED)
+        dibujar_ruleta(angulo % 360)
+        
 
         pygame.display.flip()
         pygame.time.delay(30)
