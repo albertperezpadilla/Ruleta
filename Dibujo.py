@@ -54,9 +54,11 @@ def app_draw():
 
     # Pintar el fons de blanc
     screen.fill(DARK_GREEN)
+    pygame.draw.rect(screen,BROWN,(0,0,1800,900,),15)
+    pygame.draw.rect(screen,GOLDEN,(0,0,1800,900,),5)
 
     # Dibuixar la graella
-    utils.draw_grid(pygame, screen, 50)
+    #utils.draw_grid(pygame, screen, 50)
 
     # Resol aquí l'exercici
     dibuar_boton_ruleta(RED)

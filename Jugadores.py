@@ -120,13 +120,11 @@ def dibujar_jugador():
         texto_rect.center = (pos[2][0],pos[2][1])
         screen.blit(texto,(texto_rect[0],texto_rect[1]+30))
 
-
         dibujar_ficha(pos[3][0],pos[3][1],"10",jugadores[str(i)]["color"]["1"],jugadores[str(i)]["color"]["2"])
         texto = arial15.render(str(jugadores[str(i)]["saldo"]["10"]), True, jugadores[str(i)]["color"]["2"])
         texto_rect = texto.get_rect()
         texto_rect.center = (pos[3][0],pos[3][1])
         screen.blit(texto,(texto_rect[0],texto_rect[1]+30))
-
 
         dibujar_ficha(pos[4][0],pos[4][1],"5",jugadores[str(i)]["color"]["1"],jugadores[str(i)]["color"]["2"])
         texto = arial15.render(str(jugadores[str(i)]["saldo"]["5"]), True, jugadores[str(i)]["color"]["2"])
