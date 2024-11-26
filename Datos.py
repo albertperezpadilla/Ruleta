@@ -15,6 +15,7 @@ GREEN          = (0  , 230, 0  )
 DARK_GREEN     = (45 , 87 , 44 )
 BROWN          = (135, 80 , 20 )
 GOLDEN         = (239, 184, 16 )
+GRAY           = (100, 100, 100)
 ORANGE         = (255, 165, 0  )
 LILAC          = (216, 145, 239)
 BLUE           = (0  , 70 , 255)
@@ -98,6 +99,8 @@ jugadores = {
     }
 }
 
+#!!!!sonido_ruleta = pygame.mixer.Sound('gambling.wav')!!!!
+
 #RULETA
 CENTRO = (300,300)
 RADIO = 210
@@ -137,6 +140,48 @@ for row in orden_tablero:
 puntos_tablero = [(710, 50), (1750, 50), (1750, 350), (1670, 350), (1670, 550), (710, 550)]
 puntos_0 = [(710, 50), (630, 50), (600, 200), (630, 350), (710, 350)]
 
-#Superficie
-surface = pygame.Surface((500, 500), pygame.SRCALPHA)  
-surface.fill((200, 200, 200)) # Fons gris
+#Mouse
+mouse = { 
+    "x": -1, 
+    "y": -1,
+    "pressed": False
+}
+
+
+#HISTORIAL
+historial = []
+#SCROLL
+scroll = {
+    "percentage": 0,
+    "dragging": False,
+    "x": 625,
+    "y": 400,
+    "width": 5,
+    "height": 150,
+    "radius": 10,
+    "surface_offset": 0,
+    "visible_height": 600
+}
+#BOTON
+mostrar_historial = False
+boton_historial = {
+    "x": 50,
+    "y": 700,
+    "width": 520,
+    "height": 150,
+}
+#SUPERFICIE
+y_hist = 610
+surface = pygame.Surface((520, y_hist), pygame.SRCALPHA)
+surface.fill(DARK_GREEN)
+def actualizar_superficie():
+    global surface, historial, y_hist
+
+    y_hist = 610
+    if len(historial) > 14:
+        y_hist += (len(historial) - 14) * 40
+
+    # Crear la superficie dinámica
+    surface = pygame.Surface((520, y_hist), pygame.SRCALPHA)
+    surface.fill(DARK_GREEN)
+    return surface
