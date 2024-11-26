@@ -31,9 +31,13 @@ arial35  = pygame.font.SysFont("Arial", 35       )
 arial30  = pygame.font.SysFont("Arial", 30 , True)
 arial25  = pygame.font.SysFont("Arial", 25 , True)
 arial20  = pygame.font.SysFont("Arial", 20 , True)
+arial20b = pygame.font.SysFont("Arial", 20       )
 arial18  = pygame.font.SysFont("Arial", 18 , True)
 arial15  = pygame.font.SysFont("Arial", 18 , True)
+arial15b = pygame.font.SysFont("Arial", 15       )
 arial10  = pygame.font.SysFont("Arial", 10 , True)
+
+
 
 #CASILLAS
 casillas = {
@@ -150,7 +154,15 @@ mouse = {
 
 
 #HISTORIAL
-historial = []
+historial = {
+    "0":{"turno":str(1),"resultado":str(32),"credito":{"N":str(100),"L":str(200),"A":str(300)},"apuesta":{"N":str(100),"L":str(200),"A":str(300)}},
+    "1":{"turno":str(2),"resultado":str(32),"credito":{"N":str(100),"L":str(200),"A":str(300)},"apuesta":{"N":str(100),"L":str(200),"A":str(300)}},
+    "2":{"turno":str(3),"resultado":str(32),"credito":{"N":str(100),"L":str(200),"A":str(300)},"apuesta":{"N":str(100),"L":str(200),"A":str(300)}},
+    "3":{"turno":str(4),"resultado":str(32),"credito":{"N":str(100),"L":str(200),"A":str(300)},"apuesta":{"N":str(100),"L":str(200),"A":str(300)}},
+    "4":{"turno":str(5),"resultado":str(32),"credito":{"N":str(100),"L":str(200),"A":str(300)},"apuesta":{"N":str(100),"L":str(200),"A":str(300)}},
+    "5":{"turno":str(6),"resultado":str(32),"credito":{"N":str(100),"L":str(200),"A":str(300)},"apuesta":{"N":str(100),"L":str(200),"A":str(300)}},
+    "6":{"turno":str(7),"resultado":str(32),"credito":{"N":str(100),"L":str(200),"A":str(300)},"apuesta":{"N":str(100),"L":str(200),"A":str(300)}},
+}
 #SCROLL
 scroll = {
     "percentage": 0,
@@ -161,24 +173,24 @@ scroll = {
     "height": 150,
     "radius": 10,
     "surface_offset": 0,
-    "visible_height": 600
+    "visible_height": 500
 }
 #BOTON
 mostrar_historial = False
 boton_historial = {
-    "x": 50,
+    "x": 40,
     "y": 700,
     "width": 520,
     "height": 150,
 }
 #SUPERFICIE
-y_hist = 610
+y_hist = 505
 surface = pygame.Surface((520, y_hist), pygame.SRCALPHA)
 surface.fill(DARK_GREEN)
 def actualizar_superficie():
     global surface, historial, y_hist
 
-    y_hist = 610
+    y_hist = 505
     if len(historial) > 14:
         y_hist += (len(historial) - 14) * 40
 

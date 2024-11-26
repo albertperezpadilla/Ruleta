@@ -10,7 +10,7 @@ from Datos import *
 from Ruleta import ruleta, dibujar_ruleta, dibuar_boton_ruleta
 from Tablero import dibujar_tablero
 from Jugadores import dibujar_jugador
-from Historial import dibujar_historial, dibujar_scroll
+from Historial import dibujar_boton_historial, dibujar_historial, dibujar_scroll
 
 # !!!!sonido_ruleta.play()!!!!
 # Definir la finestra
@@ -118,10 +118,10 @@ def app_draw():
         dibujar_ruleta(ultimo_angulo)  # Mostrar la ruleta al inicio
         dibujar_tablero()
         dibujar_jugador()
-        dibujar_historial()
+        dibujar_boton_historial()
         if mostrar_historial:
+            dibujar_historial()
             dibujar_scroll()
-
 
     # Actualitzar el dibuix a la finestra
     pygame.display.update()
