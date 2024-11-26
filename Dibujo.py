@@ -100,6 +100,10 @@ def app_run():
 def app_draw():
     if jugadores["0"]["saldo"]["total"] == 0 and jugadores["1"]["saldo"]["total"] == 0 and jugadores["2"]["saldo"]["total"] == 0:
         screen.fill(BLACK)
+        texto = arial150.render("HOUSE EDGE", True, RED)
+        texto_rect = texto.get_rect()
+        texto_rect.center = (900,450)
+        screen.blit(texto,texto_rect)
     else:
         # Pintar el fons de blanc
         screen.fill(DARK_GREEN)

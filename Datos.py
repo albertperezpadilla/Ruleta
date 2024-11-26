@@ -24,15 +24,16 @@ DARK_LILAC     = (188, 67 , 226)
 DARK_BLUE      = (0  , 0  , 200)
 
 #FUENTES DE TEXTO
-arial55 = pygame.font.SysFont("Arial", 55)
-arial40 = pygame.font.SysFont("Arial", 40)
-arial35 = pygame.font.SysFont("Arial", 35)
-arial30 = pygame.font.SysFont("Arial", 30, True)
-arial25 = pygame.font.SysFont("Arial", 25, True)
-arial20 = pygame.font.SysFont("Arial", 20, True)
-arial18 = pygame.font.SysFont("Arial", 18, True)
-arial15 = pygame.font.SysFont("Arial", 18, True)
-arial10 = pygame.font.SysFont("Arial", 10, True)
+arial150 = pygame.font.SysFont("Arial", 150, True)
+arial55  = pygame.font.SysFont("Arial", 55       )
+arial40  = pygame.font.SysFont("Arial", 40       )
+arial35  = pygame.font.SysFont("Arial", 35       )
+arial30  = pygame.font.SysFont("Arial", 30 , True)
+arial25  = pygame.font.SysFont("Arial", 25 , True)
+arial20  = pygame.font.SysFont("Arial", 20 , True)
+arial18  = pygame.font.SysFont("Arial", 18 , True)
+arial15  = pygame.font.SysFont("Arial", 18 , True)
+arial10  = pygame.font.SysFont("Arial", 10 , True)
 
 #CASILLAS
 casillas = {

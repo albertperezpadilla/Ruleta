@@ -12,19 +12,20 @@ def distribuir_valores(diccionario):
     for den in denominaciones:
         diccionario[str(den)] = 0
 
-    # Primera pasada: asignar al menos una unidad a cada denominación si es posible
+    # Paso 1: distribuir al menos una unidad por denominación si es posible
     for den in denominaciones:
         if total >= den:
             diccionario[str(den)] = 1
             total -= den
 
-    # Segunda pasada: distribuir el resto empezando desde las denominaciones más grandes
-    for den in sorted(denominaciones, reverse=True):
-        if total >= den:
-            cantidad = total // den
-            diccionario[str(den)] += cantidad
-            total -= cantidad * den
-    
+    # Paso 2: distribuir equitativamente las denominaciones de menor a mayor
+    while total > 0:
+        for den in denominaciones:
+            if total >= den:
+                diccionario[str(den)] += 1
+                total -= den
+            if total <= 0:
+                break
     return diccionario
 
 def posiciones_circulo(center, radius, num_points):
