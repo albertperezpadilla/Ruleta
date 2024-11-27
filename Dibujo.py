@@ -11,7 +11,7 @@ import Datos as d
 from Ruleta import ruleta, dibujar_ruleta, dibuar_boton_ruleta, dibujar_cuadro_ganador
 from Tablero import dibujar_tablero
 from Jugadores import dibujar_jugador, dibujar_turno_jug
-from Historial import dibujar_boton_historial, dibujar_historial, dibujar_scroll
+from Historial import dibujar_boton_historial, dibujar_historial, dibujar_scroll, actualizar_superficie
 from Apuestas import dibujar_ficha_apuestas
 
 ultimo_angulo = 0
@@ -54,7 +54,6 @@ def app_events():
         elif event.type == pygame.MOUSEBUTTONUP:
             mouse["pressed"] = False
             mouse["x"], mouse["y"] = -1, -1
-            print("El ratón fue soltado.")
         elif event.type == pygame.KEYDOWN:  # Se ha pulsado una tecla
             if event.key == pygame.K_SPACE:
                 d.teclado["pressed"] = True
@@ -111,6 +110,7 @@ def app_run():
             }  
         }
         d.historial.append(hist)
+        actualizar_superficie()
         return ganador
 
     if d.mouse["pressed"] and utils.is_point_in_rect(d.mouse, d.boton_historial):

@@ -12,15 +12,13 @@ def dibujar_scroll():
     pygame.draw.circle(d.screen, d.BLACK, circle_tuple, d.scroll["radius"])
 
 def actualizar_superficie():
-    if len(d.historial) > 21:  # Ajustar la altura si el historial es largo
-        d.y_hist = (len(d.historial)) * 25  # Ajusta según el número de elementos
-    surface = pygame.Surface((520, d.y_hist), pygame.SRCALPHA)
-    surface.fill(d.DARK_GREEN)
-    return surface
+    if len(d.historial) > 21:
+        d.y_hist += 25
+        d.surface = pygame.Surface((520, d.y_hist), pygame.SRCALPHA)
+        d.surface.fill(d.DARK_GREEN)
 
 def dibujar_historial():
     #SUPERFICIE HISTORIAL
-    d.surface = actualizar_superficie()
     sub_surface = d.surface.subsurface(0, d.scroll["surface_offset"], d.surface.get_width(),540)
     d.screen.blit(sub_surface,(40,105))
     sub_surface.fill(d.DARK_GREEN)
@@ -61,7 +59,6 @@ def dibujar_historial():
     d.screen.blit(texto, (447, 82))
     texto = d.arial20.render("A", True, d.WHITE)
     d.screen.blit(texto,(505, 82))
-
     #DATOS HISTORIAL
     y_pos = 0
     for i in range(0,len(d.historial)):
