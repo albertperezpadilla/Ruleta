@@ -147,7 +147,7 @@ for row in orden_tablero:
 puntos_tablero = [(710, 50), (1750, 50), (1750, 350), (1670, 350), (1670, 550), (710, 550)]
 puntos_0 = [(710, 50), (630, 50), (600, 200), (630, 350), (710, 350)]
 
-#Mouse
+#RATON
 mouse = { 
     "x": -1, 
     "y": -1,
@@ -156,8 +156,7 @@ mouse = {
 
 #HISTORIAL
 turno = 0
-historial = [
-]
+historial = []
 #SCROLL
 scroll = {
     "percentage": 0,

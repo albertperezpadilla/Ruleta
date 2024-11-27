@@ -38,18 +38,21 @@ def app_events():
     for event in pygame.event.get():
         if event.type == pygame.QUIT: # Botó tancar finestra
             return False
-        elif event.type == pygame.MOUSEBUTTONDOWN:
-            mouse["pressed"] = True
         elif event.type == pygame.MOUSEMOTION:
             if mouse_inside:
                 mouse["x"], mouse["y"] = event.pos
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            mouse["pressed"] = True
+            mouse["x"], mouse["y"] = event.pos
         elif event.type == pygame.MOUSEBUTTONUP:
             mouse["pressed"] = False
+            mouse["x"], mouse["y"] = -1, -1
+            print("El ratón fue soltado.")
     return True
 
 # Fer càlculs
 def app_run():
-    global ultimo_angulo, scroll, mostrar_historial, turno, ganador
+    global ultimo_angulo, scroll, mostrar_historial, turno, ganador, mouse
 
     # Obtenir la posició "y" del cercle a partir del valor (percentage)
     circle_center = {
@@ -63,6 +66,7 @@ def app_run():
             scroll["dragging"] = True
 
     # Si s'està arrossegant, actualitzar la posició del cercle
+    
     if scroll["dragging"]:
         # Calcular el nou percentatge en funció de la posició dins de l'àrea de l'scroll
         relative_y = max(min(mouse["y"], scroll["y"] + scroll["height"]), scroll["y"])
@@ -76,7 +80,7 @@ def app_run():
 
     if mouse["pressed"] and not mostrar_historial and utils.is_point_in_circle(mouse, centro_circulo, boton_radio_ruleta):
         # Girar la ruleta
-        mouse["pressed"] = False
+        mouse["pressed"]=False
         ganador, ultimo_angulo = ruleta(ultimo_angulo)
         turno += 1
         hist = {
@@ -95,7 +99,7 @@ def app_run():
         }
         historial.append(hist)
         return ganador
-    
+
     if mouse["pressed"] and utils.is_point_in_rect(mouse, boton_historial):
         if mostrar_historial:
             mostrar_historial = False

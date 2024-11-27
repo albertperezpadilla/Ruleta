@@ -292,7 +292,6 @@ def dibujar_cuadro_ganador(ganador):
 
 def ruleta(angulo_inicial):
     global ultimo_angulo
-
     angulo = angulo_inicial
     velocidad = random.uniform(10, 20)
     desaceleracion = 0.04
