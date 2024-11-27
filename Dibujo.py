@@ -23,7 +23,7 @@ def main():
         is_looping = app_events()
         app_run()
         app_draw()
-
+        
         clock.tick(60) # Limitar a 60 FPS
 
     # Fora del bucle, tancar l'aplicació
@@ -49,9 +49,7 @@ def app_events():
 
 # Fer càlculs
 def app_run():
-    global ultimo_angulo
-    global scroll
-    global mostrar_historial
+    global ultimo_angulo, scroll, mostrar_historial, turno
 
     # Obtenir la posició "y" del cercle a partir del valor (percentage)
     circle_center = {
@@ -60,8 +58,9 @@ def app_run():
     }
 
     # Comprovar si el mouse ha fet click dins del cercle i iniciar l'arrossegament
-    if mouse["pressed"] and not scroll["dragging"] and utils.is_point_in_circle(mouse, circle_center, scroll["radius"]):
-        scroll["dragging"] = True
+    if len(historial) > 21:
+        if mouse["pressed"] and not scroll["dragging"] and utils.is_point_in_circle(mouse, circle_center, scroll["radius"]):
+            scroll["dragging"] = True
 
     # Si s'està arrossegant, actualitzar la posició del cercle
     if scroll["dragging"]:
@@ -77,9 +76,24 @@ def app_run():
 
     if mouse["pressed"] and not mostrar_historial and utils.is_point_in_circle(mouse, centro_circulo, boton_radio_ruleta):
         # Girar la ruleta
-        ganador, ultimo_angulo = ruleta(ultimo_angulo)
-        print(f"¡El número ganador es: {ganador}!")
         mouse["pressed"] = False
+        ganador, ultimo_angulo = ruleta(ultimo_angulo)
+        turno += 1
+        hist = {
+            "turno":str(turno),
+            "resultado":str(ganador),
+            "credito":{
+                "N":str(jugadores["0"]["saldo"]["total"]),
+                "L":str(jugadores["1"]["saldo"]["total"]),
+                "A":str(jugadores["2"]["saldo"]["total"])
+            },
+            "apuesta":{
+                "N":str("acabar"),
+                "L":str("acabar"),
+                "A":str("acabar")
+            }  
+        }
+        historial.append(hist)
     
     if mouse["pressed"] and utils.is_point_in_rect(mouse, boton_historial):
         if mostrar_historial:
@@ -118,10 +132,13 @@ def app_draw():
         dibujar_ruleta(ultimo_angulo)  # Mostrar la ruleta al inicio
         dibujar_tablero()
         dibujar_jugador()
-        dibujar_boton_historial()
+        dibujar_boton_historial(True,RED)
         if mostrar_historial:
             dibujar_historial()
-            dibujar_scroll()
+            dibujar_boton_historial(False,RED)
+            if len(historial) > 21:
+                dibujar_scroll()
+
 
     # Actualitzar el dibuix a la finestra
     pygame.display.update()

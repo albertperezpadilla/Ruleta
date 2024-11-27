@@ -13,7 +13,7 @@ def dibujar_scroll():
 
 def dibujar_historial():
     #SUPERFICIE HISTORIAL
-    sub_surface = surface.subsurface((0, scroll["surface_offset"], surface.get_width(), scroll["visible_height"]))
+    sub_surface = surface.subsurface(0, scroll["surface_offset"], surface.get_width(),540)
     screen.blit(sub_surface,(40,105))
     sub_surface.fill(DARK_GREEN)
 
@@ -57,28 +57,35 @@ def dibujar_historial():
     #DATOS HISTORIAL
     y_pos = 0
     for i in range(0,len(historial)):
-        texto = arial20b.render(historial[str(i)]["turno"], True, WHITE)
+        texto = arial20b.render(historial[i]["turno"], True, WHITE)
         surface.blit(texto, (10, y_pos + 5))
-        texto = arial20b.render(historial[str(i)]["resultado"], True, WHITE)
+        texto = arial20b.render(historial[i]["resultado"], True, WHITE)
         surface.blit(texto, (80, y_pos + 5))
-        texto = arial15b.render(historial[str(i)]["credito"]["N"], True, WHITE)
+        texto = arial15b.render(historial[i]["credito"]["N"], True, WHITE)
         surface.blit(texto, (190, y_pos + 8))
-        texto = arial15b.render(historial[str(i)]["credito"]["L"], True, WHITE)
+        texto = arial15b.render(historial[i]["credito"]["L"], True, WHITE)
         surface.blit(texto, (242, y_pos + 8))
-        texto = arial15b.render(historial[str(i)]["credito"]["A"], True, WHITE)
+        texto = arial15b.render(historial[i]["credito"]["A"], True, WHITE)
         surface.blit(texto, (293, y_pos + 8))
-        texto = arial15b.render(historial[str(i)]["apuesta"]["N"], True, WHITE)
+        texto = arial15b.render(historial[i]["apuesta"]["N"], True, WHITE)
         surface.blit(texto, (344, y_pos + 8))
-        texto = arial15b.render(historial[str(i)]["apuesta"]["L"], True, WHITE)
+        texto = arial15b.render(historial[i]["apuesta"]["L"], True, WHITE)
         surface.blit(texto, (404, y_pos + 8))
-        texto = arial15b.render(historial[str(i)]["apuesta"]["A"], True, WHITE)
+        texto = arial15b.render(historial[i]["apuesta"]["A"], True, WHITE)
         surface.blit(texto, (463, y_pos + 8))
         pygame.draw.line(surface,WHITE,(0,y_pos+25),(520,y_pos+25),1)
         y_pos += 25
 
-
-def dibujar_boton_historial():
-    pygame.draw.rect(screen, RED, (boton_historial["x"], boton_historial["y"], boton_historial["width"], boton_historial["height"]))
+def dibujar_boton_historial(texto,color):
+    pygame.draw.rect(screen, color, (boton_historial["x"], boton_historial["y"], boton_historial["width"], boton_historial["height"]))
     pygame.draw.rect(screen, WHITE, (boton_historial["x"], boton_historial["y"], boton_historial["width"], boton_historial["height"]), 5)
-    text = arial55.render("Mostrar Historial", True, WHITE)
-    screen.blit(text, (100, 750))
+    if texto == True:
+        texto = arial55.render("Mostrar Historial", True, WHITE)
+        texto_rect = texto.get_rect()
+        texto_rect.center = (300,775)
+        screen.blit(texto, texto_rect)
+    if texto == False:
+        texto = arial55.render("Mostrar Ruleta", True, WHITE)
+        texto_rect = texto.get_rect()
+        texto_rect.center = (300,775)
+        screen.blit(texto, texto_rect)

@@ -152,17 +152,10 @@ mouse = {
     "pressed": False
 }
 
-
 #HISTORIAL
-historial = {
-    "0":{"turno":str(1),"resultado":str(32),"credito":{"N":str(100),"L":str(200),"A":str(300)},"apuesta":{"N":str(100),"L":str(200),"A":str(300)}},
-    "1":{"turno":str(2),"resultado":str(32),"credito":{"N":str(100),"L":str(200),"A":str(300)},"apuesta":{"N":str(100),"L":str(200),"A":str(300)}},
-    "2":{"turno":str(3),"resultado":str(32),"credito":{"N":str(100),"L":str(200),"A":str(300)},"apuesta":{"N":str(100),"L":str(200),"A":str(300)}},
-    "3":{"turno":str(4),"resultado":str(32),"credito":{"N":str(100),"L":str(200),"A":str(300)},"apuesta":{"N":str(100),"L":str(200),"A":str(300)}},
-    "4":{"turno":str(5),"resultado":str(32),"credito":{"N":str(100),"L":str(200),"A":str(300)},"apuesta":{"N":str(100),"L":str(200),"A":str(300)}},
-    "5":{"turno":str(6),"resultado":str(32),"credito":{"N":str(100),"L":str(200),"A":str(300)},"apuesta":{"N":str(100),"L":str(200),"A":str(300)}},
-    "6":{"turno":str(7),"resultado":str(32),"credito":{"N":str(100),"L":str(200),"A":str(300)},"apuesta":{"N":str(100),"L":str(200),"A":str(300)}},
-}
+turno = 0
+historial = [
+]
 #SCROLL
 scroll = {
     "percentage": 0,
@@ -173,7 +166,7 @@ scroll = {
     "height": 150,
     "radius": 10,
     "surface_offset": 0,
-    "visible_height": 500
+    "visible_height": 540
 }
 #BOTON
 mostrar_historial = False
@@ -184,17 +177,5 @@ boton_historial = {
     "height": 150,
 }
 #SUPERFICIE
-y_hist = 505
-surface = pygame.Surface((520, y_hist), pygame.SRCALPHA)
-surface.fill(DARK_GREEN)
-def actualizar_superficie():
-    global surface, historial, y_hist
-
-    y_hist = 505
-    if len(historial) > 14:
-        y_hist += (len(historial) - 14) * 40
-
-    # Crear la superficie dinámica
-    surface = pygame.Surface((520, y_hist), pygame.SRCALPHA)
-    surface.fill(DARK_GREEN)
-    return surface
+y_hist = 540
+surface = pygame.Surface((520,y_hist*5), pygame.SRCALPHA)

@@ -2,7 +2,8 @@ import math
 import random
 import pygame
 import sys
-from Datos import * 
+from Datos import *
+from Historial import dibujar_boton_historial
 
 
 def rotate_point(x, y, cx, cy):
@@ -296,6 +297,7 @@ def ruleta(angulo_inicial):
         velocidad -= desaceleracion
         
         dibuar_boton_ruleta(DARK_RED)
+        dibujar_boton_historial(True,DARK_RED)
         dibujar_ruleta(angulo % 360)
         
 
