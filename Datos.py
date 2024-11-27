@@ -26,6 +26,7 @@ DARK_BLUE      = (0  , 0  , 200)
 #FUENTES DE TEXTO
 arial150 = pygame.font.SysFont("Arial", 150, True)
 arial55  = pygame.font.SysFont("Arial", 55       )
+arial45  = pygame.font.SysFont("Arial", 45       )
 arial40  = pygame.font.SysFont("Arial", 40       )
 arial35  = pygame.font.SysFont("Arial", 35       )
 arial30  = pygame.font.SysFont("Arial", 30 , True)
@@ -123,6 +124,7 @@ NUMEROS = len(orden_ruleta)
 boton_x_ruleta = 500
 boton_y_ruleta = 500
 boton_radio_ruleta = 50
+ganador = ""
 
 #TABLERO
 orden_tablero = [

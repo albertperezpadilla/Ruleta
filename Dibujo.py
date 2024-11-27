@@ -7,7 +7,7 @@ import utils
 pygame.init()
 
 from Datos import *
-from Ruleta import ruleta, dibujar_ruleta, dibuar_boton_ruleta
+from Ruleta import ruleta, dibujar_ruleta, dibuar_boton_ruleta, dibujar_cuadro_ganador
 from Tablero import dibujar_tablero
 from Jugadores import dibujar_jugador
 from Historial import dibujar_boton_historial, dibujar_historial, dibujar_scroll
@@ -49,7 +49,7 @@ def app_events():
 
 # Fer càlculs
 def app_run():
-    global ultimo_angulo, scroll, mostrar_historial, turno
+    global ultimo_angulo, scroll, mostrar_historial, turno, ganador
 
     # Obtenir la posició "y" del cercle a partir del valor (percentage)
     circle_center = {
@@ -94,6 +94,7 @@ def app_run():
             }  
         }
         historial.append(hist)
+        return ganador
     
     if mouse["pressed"] and utils.is_point_in_rect(mouse, boton_historial):
         if mostrar_historial:
@@ -130,6 +131,7 @@ def app_draw():
         # Resol aquí l'exercici
         dibuar_boton_ruleta(RED)
         dibujar_ruleta(ultimo_angulo)  # Mostrar la ruleta al inicio
+        dibujar_cuadro_ganador(ganador)
         dibujar_tablero()
         dibujar_jugador()
         dibujar_boton_historial(True,RED)

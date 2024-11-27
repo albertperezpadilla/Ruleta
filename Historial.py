@@ -78,7 +78,7 @@ def dibujar_historial():
 
 def dibujar_boton_historial(texto,color):
     pygame.draw.rect(screen, color, (boton_historial["x"], boton_historial["y"], boton_historial["width"], boton_historial["height"]))
-    pygame.draw.rect(screen, WHITE, (boton_historial["x"], boton_historial["y"], boton_historial["width"], boton_historial["height"]), 5)
+    pygame.draw.rect(screen, GOLDEN, (boton_historial["x"], boton_historial["y"], boton_historial["width"], boton_historial["height"]), 5)
     if texto == True:
         texto = arial55.render("Mostrar Historial", True, WHITE)
         texto_rect = texto.get_rect()

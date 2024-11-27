@@ -281,6 +281,15 @@ def dibuar_boton_ruleta(color):
     texto_rect = texto.get_rect(center=(boton_x_ruleta, boton_y_ruleta))
     screen.blit(texto, texto_rect)
 
+def dibujar_cuadro_ganador(ganador):
+    pygame.draw.rect(screen,BROWN,(40,580,520,70))
+    pygame.draw.rect(screen,GOLDEN,(40,580,520,70),5)
+    pygame.draw.line(screen,GOLDEN,(480,580),(480,648),3)
+    texto = arial45.render("Ultimo num. ganador", True, WHITE)
+    screen.blit(texto,(50,590))
+    texto = arial40.render(str(ganador), True, WHITE)
+    screen.blit(texto,(495,590))
+
 def ruleta(angulo_inicial):
     global ultimo_angulo
 
