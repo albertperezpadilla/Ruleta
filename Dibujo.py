@@ -1,16 +1,22 @@
 import os
-import math
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
 import sys
 import utils
+import ctypes
+ctypes.windll.user32.SetProcessDPIAware()
 pygame.init()
 
-from Datos import *
+import Datos as d 
 from Ruleta import ruleta, dibujar_ruleta, dibuar_boton_ruleta, dibujar_cuadro_ganador
 from Tablero import dibujar_tablero
-from Jugadores import dibujar_jugador
+from Jugadores import dibujar_jugador, dibujar_turno_jug
 from Historial import dibujar_boton_historial, dibujar_historial, dibujar_scroll
+
+ultimo_angulo = 0
+ganador = ""
+mostrar_historial = False
+turno = 0
 
 # !!!!sonido_ruleta.play()!!!!
 # Definir la finestra
@@ -24,7 +30,7 @@ def main():
         app_run()
         app_draw()
         
-        clock.tick(60) # Limitar a 60 FPS
+        d.clock.tick(60) # Limitar a 60 FPS
 
     # Fora del bucle, tancar l'aplicació
     pygame.quit()
@@ -32,7 +38,7 @@ def main():
 
 # Gestionar events
 def app_events():
-    global mouse
+    mouse = d.mouse
     mouse_inside = pygame.mouse.get_focused()  # El ratolí està dins de la finestra?
 
     for event in pygame.event.get():
@@ -48,48 +54,54 @@ def app_events():
             mouse["pressed"] = False
             mouse["x"], mouse["y"] = -1, -1
             print("El ratón fue soltado.")
+        elif event.type == pygame.KEYDOWN:  # Se ha pulsado una tecla
+            if event.key == pygame.K_SPACE:
+                d.teclado["pressed"] = True
+        elif event.type == pygame.KEYUP:
+            if event.key == pygame.K_SPACE:
+                d.teclado["pressed"] = False
     return True
 
 # Fer càlculs
 def app_run():
-    global ultimo_angulo, scroll, mostrar_historial, turno, ganador, mouse
-
+    global ganador, ultimo_angulo, turno, mostrar_historial
     # Obtenir la posició "y" del cercle a partir del valor (percentage)
     circle_center = {
-        "x": int(scroll["x"] + scroll["width"] / 2),
-        "y": int(scroll["y"] + (scroll["percentage"] / 100) * scroll["height"])
+        "x": int(d.scroll["x"] + d.scroll["width"] / 2),
+        "y": int(d.scroll["y"] + (d.scroll["percentage"] / 100) * d.scroll["height"])
     }
 
     # Comprovar si el mouse ha fet click dins del cercle i iniciar l'arrossegament
-    if len(historial) > 21:
-        if mouse["pressed"] and not scroll["dragging"] and utils.is_point_in_circle(mouse, circle_center, scroll["radius"]):
-            scroll["dragging"] = True
+    if len(d.historial) > 21:
+        if d.mouse["pressed"] and not d.scroll["dragging"] and utils.is_point_in_circle(d.mouse, circle_center, d.scroll["radius"]):
+            d.scroll["dragging"] = True
 
     # Si s'està arrossegant, actualitzar la posició del cercle
     
-    if scroll["dragging"]:
+    if d.scroll["dragging"]:
         # Calcular el nou percentatge en funció de la posició dins de l'àrea de l'scroll
-        relative_y = max(min(mouse["y"], scroll["y"] + scroll["height"]), scroll["y"])
-        scroll["percentage"] = ((relative_y - scroll["y"]) / scroll["height"]) * 100
+        relative_y = max(min(d.mouse["y"], d.scroll["y"] + d.scroll["height"]), d.scroll["y"])
+        d.scroll["percentage"] = ((relative_y - d.scroll["y"]) / d.scroll["height"]) * 100
     
     # Comprobar si el clic está dentro del botón
     centro_circulo = {
-        "x": boton_x_ruleta,
-        "y": boton_y_ruleta
+        "x": d.boton_x_ruleta,
+        "y": d.boton_y_ruleta
     }
 
-    if mouse["pressed"] and not mostrar_historial and utils.is_point_in_circle(mouse, centro_circulo, boton_radio_ruleta):
+    if d.mouse["pressed"] and not mostrar_historial and utils.is_point_in_circle(d.mouse, centro_circulo, d.boton_radio_ruleta):
         # Girar la ruleta
-        mouse["pressed"]=False
+        d.mouse["pressed"]=False
         ganador, ultimo_angulo = ruleta(ultimo_angulo)
         turno += 1
+        d.turno_jug = 0
         hist = {
             "turno":str(turno),
             "resultado":str(ganador),
             "credito":{
-                "N":str(jugadores["0"]["saldo"]["total"]),
-                "L":str(jugadores["1"]["saldo"]["total"]),
-                "A":str(jugadores["2"]["saldo"]["total"])
+                "N":str(d.jugadores["0"]["saldo"]["total"]),
+                "L":str(d.jugadores["1"]["saldo"]["total"]),
+                "A":str(d.jugadores["2"]["saldo"]["total"])
             },
             "apuesta":{
                 "N":str("acabar"),
@@ -97,55 +109,57 @@ def app_run():
                 "A":str("acabar")
             }  
         }
-        historial.append(hist)
+        d.historial.append(hist)
         return ganador
 
-    if mouse["pressed"] and utils.is_point_in_rect(mouse, boton_historial):
+    if d.mouse["pressed"] and utils.is_point_in_rect(d.mouse, d.boton_historial):
         if mostrar_historial:
             mostrar_historial = False
         else:
             mostrar_historial = True
-        mouse["pressed"] = False
+        d.mouse["pressed"] = False
 
     # Aturar l'arrossegament quan s'aixeca el botó del mouse
-    if not mouse["pressed"]:
-        scroll["dragging"] = False
+    if not d.mouse["pressed"]:
+        d.scroll["dragging"] = False
 
     # Calcular la posició "y" de dibuix de la superfície
-    scroll["surface_offset"] = int((scroll["percentage"] / 100) * (surface.get_height() - scroll["visible_height"]))
-
+    d.scroll["surface_offset"] = int((d.scroll["percentage"] / 100) * (d.surface.get_height() - d.scroll["visible_height"]))
+    
+    if d.teclado["pressed"]:
+        d.turno_jug +=1
+        d.teclado["pressed"] = False
 
 # Dibuixar
 def app_draw():
-    if jugadores["0"]["saldo"]["total"] == 0 and jugadores["1"]["saldo"]["total"] == 0 and jugadores["2"]["saldo"]["total"] == 0:
-        screen.fill(BLACK)
-        texto = arial150.render("HOUSE EDGE", True, RED)
+    if d.jugadores["0"]["saldo"]["total"] == 0 and d.jugadores["1"]["saldo"]["total"] == 0 and d.jugadores["2"]["saldo"]["total"] == 0:
+        d.screen.fill(d.BLACK)
+        texto = d.arial150.render("HOUSE EDGE", True, d.RED)
         texto_rect = texto.get_rect()
         texto_rect.center = (900,450)
-        screen.blit(texto,texto_rect)
+        d.screen.blit(texto,texto_rect)
     else:
         # Pintar el fons de blanc
-        screen.fill(DARK_GREEN)
-        pygame.draw.rect(screen,BROWN,(0,0,1800,900,),15)
-        pygame.draw.rect(screen,GOLDEN,(0,0,1800,900,),5)
+        d.screen.fill(d.DARK_GREEN)
+        pygame.draw.rect(d.screen,d.BROWN,(0,0,1800,900,),15)
+        pygame.draw.rect(d.screen,d.GOLDEN,(0,0,1800,900,),5)
 
         # Dibuixar la graella
-        #utils.draw_grid(pygame, screen, 50)
+        utils.draw_grid(pygame, d.screen, 50)
 
         # Resol aquí l'exercici
-        dibuar_boton_ruleta(RED)
+        dibuar_boton_ruleta(d.RED)
         dibujar_ruleta(ultimo_angulo)  # Mostrar la ruleta al inicio
         dibujar_cuadro_ganador(ganador)
         dibujar_tablero()
         dibujar_jugador()
-        dibujar_boton_historial(True,RED)
+        dibujar_turno_jug()
+        dibujar_boton_historial(True,d.RED)
         if mostrar_historial:
             dibujar_historial()
-            dibujar_boton_historial(False,RED)
-            if len(historial) > 21:
+            dibujar_boton_historial(False,d.RED)
+            if len(d.historial) > 21:
                 dibujar_scroll()
-
-
     # Actualitzar el dibuix a la finestra
     pygame.display.update()
 

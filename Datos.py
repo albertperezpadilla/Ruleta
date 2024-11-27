@@ -156,6 +156,7 @@ mouse = {
 
 #HISTORIAL
 turno = 0
+turno_jug = 0
 historial = []
 #SCROLL
 scroll = {
@@ -179,4 +180,6 @@ boton_historial = {
 }
 #SUPERFICIE
 y_hist = 540
-surface = pygame.Surface((520,y_hist*5), pygame.SRCALPHA)
+surface = pygame.Surface((520,y_hist), pygame.SRCALPHA)
+
+teclado = {"pressed": False}
