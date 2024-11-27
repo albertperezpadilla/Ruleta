@@ -12,6 +12,7 @@ from Ruleta import ruleta, dibujar_ruleta, dibuar_boton_ruleta, dibujar_cuadro_g
 from Tablero import dibujar_tablero
 from Jugadores import dibujar_jugador, dibujar_turno_jug
 from Historial import dibujar_boton_historial, dibujar_historial, dibujar_scroll
+from Apuestas import dibujar_ficha_apuestas
 
 ultimo_angulo = 0
 ganador = ""
@@ -130,6 +131,8 @@ def app_run():
         d.turno_jug +=1
         d.teclado["pressed"] = False
 
+    
+
 # Dibuixar
 def app_draw():
     if d.jugadores["0"]["saldo"]["total"] == 0 and d.jugadores["1"]["saldo"]["total"] == 0 and d.jugadores["2"]["saldo"]["total"] == 0:
@@ -160,6 +163,7 @@ def app_draw():
             dibujar_boton_historial(False,d.RED)
             if len(d.historial) > 21:
                 dibujar_scroll()
+        dibujar_ficha_apuestas()
     # Actualitzar el dibuix a la finestra
     pygame.display.update()
 

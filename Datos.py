@@ -1,6 +1,6 @@
 import pygame
 pygame.init()
-
+from Jugadores import posiciones_circulo
 #JUEGO
 screen = pygame.display.set_mode((1800, 900))
 clock = pygame.time.Clock()
@@ -183,3 +183,68 @@ y_hist = 540
 surface = pygame.Surface((520,y_hist), pygame.SRCALPHA)
 
 teclado = {"pressed": False}
+
+#FICHA
+pos_fichas_naranja = posiciones_circulo((725,730),60,5)
+pos_fichas_naranja100 = {
+    "x": pos_fichas_naranja[0][0],
+    "y": pos_fichas_naranja[0][1]
+}
+pos_fichas_naranja50 = {
+    "x": pos_fichas_naranja[1][0],
+    "y": pos_fichas_naranja[1][1]
+}
+pos_fichas_naranja20 = {
+    "x": pos_fichas_naranja[2][0],
+    "y": pos_fichas_naranja[2][1]
+}
+pos_fichas_naranja10 = {
+    "x": pos_fichas_naranja[3][0],
+    "y": pos_fichas_naranja[3][1]
+}
+pos_fichas_naranja5 = {
+    "x": pos_fichas_naranja[4][0],
+    "y": pos_fichas_naranja[4][1]
+}
+pos_fichas_lila = posiciones_circulo((1025,730),60,5)
+pos_fichas_lila100 = {
+    "x": pos_fichas_lila[0][0],
+    "y": pos_fichas_lila[0][1]
+}
+pos_fichas_lila50 = {
+    "x": pos_fichas_lila[1][0],
+    "y": pos_fichas_lila[1][1]
+}
+pos_fichas_lila20 = {
+    "x": pos_fichas_lila[2][0],
+    "y": pos_fichas_lila[2][1]
+}
+pos_fichas_lila10 = {
+    "x": pos_fichas_lila[3][0],
+    "y": pos_fichas_lila[3][1]
+}
+pos_fichas_lila5 = {
+    "x": pos_fichas_lila[4][0],
+    "y": pos_fichas_lila[4][1]
+}
+pos_fichas_azul = posiciones_circulo((1325,730),60,5)
+pos_fichas_azul100 = {
+    "x": pos_fichas_azul[0][0],
+    "y": pos_fichas_azul[0][1]
+}
+pos_fichas_azul50 = {
+    "x": pos_fichas_azul[1][0],
+    "y": pos_fichas_azul[1][1]
+}
+pos_fichas_azul20 = {
+    "x": pos_fichas_azul[2][0],
+    "y": pos_fichas_azul[2][1]
+}
+pos_fichas_azul10 = {
+    "x": pos_fichas_azul[3][0],
+    "y": pos_fichas_azul[3][1]
+}
+pos_fichas_azul5 = {
+    "x": pos_fichas_azul[4][0],
+    "y": pos_fichas_azul[4][1]
+}
