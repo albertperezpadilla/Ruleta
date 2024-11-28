@@ -185,66 +185,84 @@ surface = pygame.Surface((520,y_hist), pygame.SRCALPHA)
 teclado = {"pressed": False}
 
 #FICHA
+#NARANJA
 pos_fichas_naranja = posiciones_circulo((725,730),60,5)
 pos_fichas_naranja100 = {
     "x": pos_fichas_naranja[0][0],
     "y": pos_fichas_naranja[0][1]
 }
+arrastrando_ficha_naranja100 = False
 pos_fichas_naranja50 = {
     "x": pos_fichas_naranja[1][0],
     "y": pos_fichas_naranja[1][1]
 }
+arrastrando_ficha_naranja50 = False
 pos_fichas_naranja20 = {
     "x": pos_fichas_naranja[2][0],
     "y": pos_fichas_naranja[2][1]
 }
+arrastrando_ficha_naranja20 = False
 pos_fichas_naranja10 = {
     "x": pos_fichas_naranja[3][0],
     "y": pos_fichas_naranja[3][1]
 }
+arrastrando_ficha_naranja10 = False
 pos_fichas_naranja5 = {
     "x": pos_fichas_naranja[4][0],
     "y": pos_fichas_naranja[4][1]
 }
+arrastrando_ficha_naranja5 = False
+#LILA
 pos_fichas_lila = posiciones_circulo((1025,730),60,5)
 pos_fichas_lila100 = {
     "x": pos_fichas_lila[0][0],
     "y": pos_fichas_lila[0][1]
 }
+arrastrando_ficha_lila100 = False
 pos_fichas_lila50 = {
     "x": pos_fichas_lila[1][0],
     "y": pos_fichas_lila[1][1]
 }
+arrastrando_ficha_lila50 = False
 pos_fichas_lila20 = {
     "x": pos_fichas_lila[2][0],
     "y": pos_fichas_lila[2][1]
 }
+arrastrando_ficha_lila20 = False
 pos_fichas_lila10 = {
     "x": pos_fichas_lila[3][0],
     "y": pos_fichas_lila[3][1]
 }
+arrastrando_ficha_lila10 = False
 pos_fichas_lila5 = {
     "x": pos_fichas_lila[4][0],
     "y": pos_fichas_lila[4][1]
 }
+arrastrando_ficha_lila5 = False
+#AZUL
 pos_fichas_azul = posiciones_circulo((1325,730),60,5)
 pos_fichas_azul100 = {
     "x": pos_fichas_azul[0][0],
     "y": pos_fichas_azul[0][1]
 }
+arrastrando_ficha_azul100 = False
 pos_fichas_azul50 = {
     "x": pos_fichas_azul[1][0],
     "y": pos_fichas_azul[1][1]
 }
+arrastrando_ficha_azul50 = False
 pos_fichas_azul20 = {
     "x": pos_fichas_azul[2][0],
     "y": pos_fichas_azul[2][1]
 }
+arrastrando_ficha_azul20 = False
 pos_fichas_azul10 = {
     "x": pos_fichas_azul[3][0],
     "y": pos_fichas_azul[3][1]
 }
+arrastrando_ficha_azul10 = False
 pos_fichas_azul5 = {
     "x": pos_fichas_azul[4][0],
     "y": pos_fichas_azul[4][1]
 }
+arrastrando_ficha_azul5 = False
