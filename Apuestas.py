@@ -246,7 +246,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 0 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #1
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":710,"y":250,"width":80,"height":100}):
                 if ganador == 1:
@@ -254,7 +257,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 1 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #2
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":710,"y":150,"width":80,"height":100}):
                 if ganador == 2:
@@ -262,7 +268,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 2 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #3
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":710,"y":50,"width":80,"height":100}):
                 if ganador == 3:
@@ -270,7 +279,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 3 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #4
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":790,"y":250,"width":80,"height":100}):
                 if ganador == 4:
@@ -278,7 +290,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 4 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #5
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":790,"y":150,"width":80,"height":100}):
                 if ganador == 5:
@@ -286,7 +301,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 5 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #6
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":790,"y":50,"width":80,"height":100}):
                 if ganador == 6:
@@ -294,7 +312,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 6 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #7
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":870,"y":250,"width":80,"height":100}):
                 if ganador == 7:
@@ -302,7 +323,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 7 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #8
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":870,"y":150,"width":80,"height":100}):
                 if ganador == 8:
@@ -310,7 +334,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 8 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #9
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":870,"y":50,"width":80,"height":100}):
                 if ganador == 9:
@@ -318,7 +345,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 9 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #10
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":950,"y":250,"width":80,"height":100}):
                 if ganador == 10:
@@ -326,7 +356,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 10 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #11
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":950,"y":150,"width":80,"height":100}):
                 if ganador == 11:
@@ -334,7 +367,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 11 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #12
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":950,"y":50,"width":80,"height":100}):
                 if ganador == 12:
@@ -342,7 +378,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 12 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #13
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1030,"y":250,"width":80,"height":100}):
                 if ganador == 13:
@@ -350,7 +389,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 13 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #14
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1030,"y":150,"width":80,"height":100}):
                 if ganador == 14:
@@ -358,7 +400,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 14 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #15
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1030,"y":50,"width":80,"height":100}):
                 if ganador == 15:
@@ -366,7 +411,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 15 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #16 
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1110,"y":250,"width":80,"height":100}):
                 if ganador == 16:
@@ -374,7 +422,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 16 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #17
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1110,"y":150,"width":80,"height":100}):
                 if ganador == 17:
@@ -382,7 +433,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 17 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #18
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1110,"y":50,"width":80,"height":100}):
                 if ganador == 18:
@@ -390,7 +444,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 18 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #19
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1190,"y":250,"width":80,"height":100}):
                 if ganador == 19:
@@ -398,7 +455,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 19 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #20
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1190,"y":150,"width":80,"height":100}):
                 if ganador == 20:
@@ -406,7 +466,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 20 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #21
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1190,"y":50,"width":80,"height":100}):
                 if ganador == 21:
@@ -414,7 +477,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 21 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #22
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1270,"y":250,"width":80,"height":100}):
                 if ganador == 22:
@@ -422,7 +488,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 22 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #23
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1270,"y":150,"width":80,"height":100}):
                 if ganador == 23:
@@ -430,7 +499,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 23 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #24
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1270,"y":50,"width":80,"height":100}):
                 if ganador == 24:
@@ -438,7 +510,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 24 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #25
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1350,"y":250,"width":80,"height":100}):
                 if ganador == 25:
@@ -446,7 +521,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 25 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #26
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1350,"y":150,"width":80,"height":100}):
                 if ganador == 26:
@@ -454,7 +532,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 26 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #27
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1350,"y":50,"width":80,"height":100}):
                 if ganador == 27:
@@ -462,7 +543,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 27 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #28
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1430,"y":250,"width":80,"height":100}):
                 if ganador == 28:
@@ -470,7 +554,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 28 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #29
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1430,"y":150,"width":80,"height":100}):
                 if ganador == 29:
@@ -478,7 +565,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 29 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #30
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1430,"y":50,"width":80,"height":100}):
                 if ganador == 30:
@@ -486,7 +576,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 30 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #31
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1510,"y":250,"width":80,"height":100}):
                 if ganador == 31:
@@ -494,7 +587,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 31 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #32
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1510,"y":150,"width":80,"height":100}):
                 if ganador == 32:
@@ -502,7 +598,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 32 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #33
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1510,"y":50,"width":80,"height":100}):
                 if ganador == 33:
@@ -510,7 +609,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 33 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #34
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1590,"y":250,"width":80,"height":100}):
                 if ganador == 34:
@@ -518,7 +620,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 34 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #35
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1590,"y":150,"width":80,"height":100}):
                 if ganador == 35:
@@ -526,7 +631,10 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 35 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #36
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1590,"y":50,"width":80,"height":100}):
                 if ganador == 36:
@@ -534,76 +642,139 @@ def calculos_apuestas(ganador):
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 35
                 else:
-                    print("FUNCIONA 36 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #1º 12
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":710,"y":350,"width":320,"height":100}):
-                if ganador == 1 or ganador == 2 or ganador == 3 or ganador == 4 or ganador == 5 or ganador == 6 or ganador == 7 or ganador == 8 or ganador == 9 or ganador == 10 or ganador == 11 or ganador == 12:
-                    print("FUNCIONA 1º 12")
+                if ganador == 1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9 or 10 or 11 or 12:
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 2
                 else:
-                    print("FUNCIONA 1º 12 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #2º 12
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1030,"y":350,"width":320,"height":100}):
-                if ganador == 13 or ganador == 14 or ganador == 15 or ganador == 16 or ganador == 17 or ganador == 18 or ganador == 19 or ganador == 20 or ganador == 21 or ganador == 22 or ganador == 23 or ganador == 24:
-                    print("FUNCIONA 2º 12")
+                if ganador == 13 or 14 or 15 or 16 or 17 or 18 or 19 or 20 or 21 or 22 or 23 or 24:
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 2
                 else:
-                    print("FUNCIONA 2º 12 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #3º 12
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1350,"y":350,"width":320,"height":100}):
-                if ganador == 25 or ganador == 26 or ganador == 27 or ganador == 28 or ganador == 29 or ganador == 30 or ganador == 31 or ganador == 32 or ganador == 33 or ganador == 34 or ganador ==35 or ganador ==36:
-                    print("FUNCIONA 3º 12")
+                if ganador == 25 or 26 or 27 or 28 or 29 or 30 or 31 or 32 or 33 or 34 or 35 or 36:
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 2
                 else:
-                    print("FUNCIONA 3º 12 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #1º 2to1
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1670,"y":250,"width":80,"height":100}):
                 if ganador == 1 or ganador == 4 or ganador == 7 or ganador == 10 or ganador == 13 or ganador == 16 or ganador == 19 or ganador == 22 or ganador == 25 or ganador == 28 or ganador == 31 or ganador == 34:
-                    print("FUNCIONA 1º 2to1")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 2
                 else:
-                    print("FUNCIONA 1º 2to1 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #2º 2to1
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1670,"y":150,"width":80,"height":100}):
                 if ganador == 2 or ganador == 5 or ganador == 8 or ganador == 11 or ganador == 14 or ganador == 17 or ganador == 20 or ganador == 23 or ganador == 26 or ganador == 29 or ganador == 32 or ganador == 35:
-                    print("FUNCIONA 2º 2to1")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 2
                 else:
-                    print("FUNCIONA 2º 2to1 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #3º 2to1
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1670,"y":50,"width":80,"height":100}):
                 if ganador == 3 or ganador == 6 or ganador == 9 or ganador == 12 or ganador == 15 or ganador == 18 or ganador == 21 or ganador == 24 or ganador == 27 or ganador == 30 or ganador == 33 or ganador == 36:
-                    print("FUNCIONA 3º 2to1")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 2
                 else:
-                    print("FUNCIONA 3º 2to1 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #1to18
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":710,"y":450,"width":160,"height":100}):
                 if ganador == 1 or ganador == 2 or ganador == 3 or ganador == 4 or ganador == 5 or ganador == 6 or ganador == 7 or ganador == 8 or ganador == 9 or ganador == 10 or ganador == 11 or ganador == 12 or ganador == 13 or ganador == 14 or ganador == 15 or ganador == 16 or ganador == 17 or ganador == 18:
-                    print("FUNCIONA 1to18")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
                 else:
-                    print("FUNCIONA 1to18 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #Par
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":870,"y":450,"width":160,"height":100}):
                 if ganador == 2 or ganador == 4 or ganador == 6 or ganador == 8 or ganador == 10 or ganador == 12 or ganador == 14 or ganador == 16 or ganador == 18 or ganador == 20 or ganador == 22 or ganador == 24 or ganador == 26 or ganador == 28 or ganador == 30 or ganador == 32 or ganador == 34 or ganador == 36:
-                    print("FUNCIONA Even")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
                 else:
-                    print("FUNCIONA Even OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #Rojo
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1030,"y":450,"width":160,"height":100}):
                 if ganador == 1 or ganador == 3 or ganador == 5 or ganador == 7 or ganador == 9 or ganador == 12 or ganador == 14 or ganador == 16 or ganador == 18 or ganador == 19 or ganador == 21 or ganador == 23 or ganador == 25 or ganador == 27 or ganador == 30 or ganador == 32 or ganador == 34 or ganador == 36:
-                    print("FUNCIONA Rojo")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
                 else:
-                    print("FUNCIONA Rojo OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #Negro
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1190,"y":450,"width":160,"height":100}):
                 if ganador == 2 or ganador == 4 or ganador == 6 or ganador == 8 or ganador == 10 or ganador == 11 or ganador == 13 or ganador == 15 or ganador == 17 or ganador == 20 or ganador == 22 or ganador == 24 or ganador == 26 or ganador == 28 or ganador == 29 or ganador == 31 or ganador == 33 or ganador == 35:
-                    print("FUNCIONA Negro")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
                 else:
-                    print("FUNCIONA Negro OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #Impar
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1350,"y":450,"width":160,"height":100}):
                 if ganador == 1 or ganador == 3 or ganador == 5 or ganador == 7 or ganador == 9 or ganador == 11 or ganador == 13 or ganador == 15 or ganador == 17 or ganador == 19 or ganador == 21 or ganador == 23 or ganador == 25 or ganador == 27 or ganador == 29 or ganador == 31 or ganador == 33 or ganador == 35:
-                    print("FUNCIONA Odd")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
                 else:
-                    print("FUNCIONA Odd OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #19to36
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1510,"y":450,"width":160,"height":100}):
                 if ganador == 19 or ganador == 20 or ganador == 21 or ganador == 22 or ganador == 23 or ganador == 24 or ganador == 25 or ganador == 26 or ganador == 27 or ganador == 28 or ganador == 29 or ganador == 30 or ganador == 31 or ganador == 32 or ganador == 33 or ganador == 34 or ganador == 35 or ganador == 36:
-                    print("FUNCIONA 19to36")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
                 else:
-                    print("FUNCIONA 19to36 OTRO")
+                    for clave, jugador in d.jugadores.items():
+                        if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
+                            jugador["saldo"]["total"] -= int(fichas_dibujadas [i][i2]["valor"])
+                            d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
