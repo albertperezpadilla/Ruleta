@@ -648,7 +648,7 @@ def calculos_apuestas(ganador):
                             d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #1º 12
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":710,"y":350,"width":320,"height":100}):
-                if ganador == 1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9 or 10 or 11 or 12:
+                if ganador == 1 or ganador == 2 or ganador == 3 or ganador == 4 or ganador == 5 or ganador == 6 or ganador == 7 or ganador == 8 or ganador == 9 or ganador == 10 or ganador == 11 or ganador == 12:
                     for clave, jugador in d.jugadores.items():
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 2
@@ -659,7 +659,7 @@ def calculos_apuestas(ganador):
                             d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #2º 12
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1030,"y":350,"width":320,"height":100}):
-                if ganador == 13 or 14 or 15 or 16 or 17 or 18 or 19 or 20 or 21 or 22 or 23 or 24:
+                if ganador == 13 or ganador == 14 or ganador == 15 or ganador == 16 or ganador == 17 or ganador == 18 or ganador == 19 or ganador == 20 or ganador == 21 or ganador == 22 or ganador == 23 or ganador == 24:
                     for clave, jugador in d.jugadores.items():
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 2
@@ -670,7 +670,7 @@ def calculos_apuestas(ganador):
                             d.jugadores["3"]["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"])
             #3º 12
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1350,"y":350,"width":320,"height":100}):
-                if ganador == 25 or 26 or 27 or 28 or 29 or 30 or 31 or 32 or 33 or 34 or 35 or 36:
+                if ganador == 25 or ganador == 26 or ganador == 27 or ganador == 28 or ganador == 29 or ganador == 30 or ganador == 31 or ganador == 32 or ganador == 33 or ganador == 34 or ganador == 35 or ganador == 36:
                     for clave, jugador in d.jugadores.items():
                         if jugador["color"]["1"] == fichas_dibujadas [i][i2]["color"]:
                             jugador["saldo"]["total"] += int(fichas_dibujadas [i][i2]["valor"]) * 2
