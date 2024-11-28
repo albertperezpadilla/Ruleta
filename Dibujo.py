@@ -10,16 +10,19 @@ pygame.init()
 import Datos as d 
 from Ruleta import ruleta, dibujar_ruleta, dibuar_boton_ruleta, dibujar_cuadro_ganador
 from Tablero import dibujar_tablero
-from Jugadores import dibujar_jugador, dibujar_turno_jug
+from Jugadores import dibujar_jugador, dibujar_turno_jug, distribuir_valores
 from Historial import dibujar_boton_historial, dibujar_historial, dibujar_scroll, actualizar_superficie
-from Apuestas import dibujar_ficha_apuestas
+from Apuestas import dibujar_ficha_apuestas, fichas_dibujadas, ultima_posicion_mouse
 
 ultimo_angulo = 0
 ganador = ""
 mostrar_historial = False
 turno = 0
 
-# !!!!sonido_ruleta.play()!!!!
+if ganador == "":
+    for i in range(0,len(d.jugadores)):
+        distribuir_valores(d.jugadores[str(i)]["saldo"])
+
 # Definir la finestra
 pygame.display.set_caption('Ruleta')
 
@@ -111,6 +114,8 @@ def app_run():
         }
         d.historial.append(hist)
         actualizar_superficie()
+        for i in range(0,len(d.jugadores)):
+            distribuir_valores(d.jugadores[str(i)]["saldo"])
         return ganador
 
     if d.mouse["pressed"] and utils.is_point_in_rect(d.mouse, d.boton_historial):
@@ -164,6 +169,7 @@ def app_draw():
             if len(d.historial) > 21:
                 dibujar_scroll()
         dibujar_ficha_apuestas()
+        #print(fichas_dibujadas)
     # Actualitzar el dibuix a la finestra
     pygame.display.update()
 

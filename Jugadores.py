@@ -74,7 +74,6 @@ def dibujar_ficha(x, y, valor, jugador, jugador2):
 def dibujar_jugador():
     x_jugadores = 600
     for i in range(0,len(d.jugadores)):
-        distribuir_valores(d.jugadores[str(i)]["saldo"])
         pygame.draw.rect(
             d.screen,
             d.jugadores[str(i)]["color"]["1"],
