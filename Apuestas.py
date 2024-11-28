@@ -228,3 +228,226 @@ def dibujar_ficha_apuestas():
     for lista in fichas_dibujadas:
         for i in lista:
             dibujar_ficha(i["x"], i["y"], i["valor"], i["color"], i["color2"])
+
+def calculos_apuestas(ganador):
+    for i in range(0,len(fichas_dibujadas)):
+        for i2 in range(0, len(fichas_dibujadas[i])):
+            
+            #0
+
+            #1
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":710,"y":250,"width":80,"height":100}):
+                if ganador == 1:
+                    print("FUNCIONA 1")
+                else:
+                    print("FUNCIONA 1 OTRO")
+            #2
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":710,"y":150,"width":80,"height":100}):
+                if ganador == 2:
+                    print("FUNCIONA 2")
+                else:
+                    print("FUNCIONA 2 OTRO")
+            #3
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":710,"y":50,"width":80,"height":100}):
+                if ganador == 3:
+                    print("FUNCIONA 3")
+                else:
+                    print("FUNCIONA 3 OTRO")
+            #4
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":790,"y":250,"width":80,"height":100}):
+                if ganador == 4:
+                    print("FUNCIONA 4")
+                else:
+                    print("FUNCIONA 4 OTRO")
+            #5
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":790,"y":150,"width":80,"height":100}):
+                if ganador == 5:
+                    print("FUNCIONA 5")
+                else:
+                    print("FUNCIONA 5 OTRO")
+            #6
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":790,"y":50,"width":80,"height":100}):
+                if ganador == 6:
+                    print("FUNCIONA 6")
+                else:
+                    print("FUNCIONA 6 OTRO")
+            #7
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":870,"y":250,"width":80,"height":100}):
+                if ganador == 7:
+                    print("FUNCIONA 7")
+                else:
+                    print("FUNCIONA 7 OTRO")
+            #8
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":870,"y":150,"width":80,"height":100}):
+                if ganador == 8:
+                    print("FUNCIONA 8")
+                else:
+                    print("FUNCIONA 8 OTRO")
+            #9
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":870,"y":50,"width":80,"height":100}):
+                if ganador == 9:
+                    print("FUNCIONA 9")
+                else:
+                    print("FUNCIONA 9 OTRO")
+            #10
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":950,"y":250,"width":80,"height":100}):
+                if ganador == 10:
+                    print("FUNCIONA 10")
+                else:
+                    print("FUNCIONA 10 OTRO")
+            #11
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":950,"y":150,"width":80,"height":100}):
+                if ganador == 11:
+                    print("FUNCIONA 11")
+                else:
+                    print("FUNCIONA 11 OTRO")
+            #12
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":950,"y":50,"width":80,"height":100}):
+                if ganador == 12:
+                    print("FUNCIONA 12")
+                else:
+                    print("FUNCIONA 12 OTRO")
+            #13
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1030,"y":250,"width":80,"height":100}):
+                if ganador == 13:
+                    print("FUNCIONA 13")
+                else:
+                    print("FUNCIONA 13 OTRO")
+            #14
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1030,"y":150,"width":80,"height":100}):
+                if ganador == 14:
+                    print("FUNCIONA 14")
+                else:
+                    print("FUNCIONA 14 OTRO")
+            #15
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1030,"y":50,"width":80,"height":100}):
+                if ganador == 15:
+                    print("FUNCIONA 15")
+                else:
+                    print("FUNCIONA 15 OTRO")
+            #16 
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1110,"y":250,"width":80,"height":100}):
+                if ganador == 16:
+                    print("FUNCIONA 16")
+                else:
+                    print("FUNCIONA 16 OTRO")
+            #17
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1110,"y":150,"width":80,"height":100}):
+                if ganador == 17:
+                    print("FUNCIONA 17")
+                else:
+                    print("FUNCIONA 17 OTRO")
+            #18
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1110,"y":50,"width":80,"height":100}):
+                if ganador == 18:
+                    print("FUNCIONA 18")
+                else:
+                    print("FUNCIONA 18 OTRO")
+            #19
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1200,"y":250,"width":80,"height":100}):
+                if ganador == 19:
+                    print("FUNCIONA 19")
+                else:
+                    print("FUNCIONA 19 OTRO")
+            #20
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1200,"y":150,"width":80,"height":100}):
+                if ganador == 20:
+                    print("FUNCIONA 20")
+                else:
+                    print("FUNCIONA 20 OTRO")
+            #21
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1200,"y":50,"width":80,"height":100}):
+                if ganador == 21:
+                    print("FUNCIONA 21")
+                else:
+                    print("FUNCIONA 21 OTRO")
+            #22
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1280,"y":250,"width":80,"height":100}):
+                if ganador == 22:
+                    print("FUNCIONA 22")
+                else:
+                    print("FUNCIONA 22 OTRO")
+            #23
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1280,"y":150,"width":80,"height":100}):
+                if ganador == 23:
+                    print("FUNCIONA 23")
+                else:
+                    print("FUNCIONA 23 OTRO")
+            #24
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1280,"y":50,"width":80,"height":100}):
+                if ganador == 24:
+                    print("FUNCIONA 24")
+                else:
+                    print("FUNCIONA 24 OTRO")
+            #25
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1360,"y":250,"width":80,"height":100}):
+                if ganador == 25:
+                    print("FUNCIONA 25")
+                else:
+                    print("FUNCIONA 25 OTRO")
+            #26
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1360,"y":150,"width":80,"height":100}):
+                if ganador == 26:
+                    print("FUNCIONA 26")
+                else:
+                    print("FUNCIONA 26 OTRO")
+            #27
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1360,"y":50,"width":80,"height":100}):
+                if ganador == 27:
+                    print("FUNCIONA 27")
+                else:
+                    print("FUNCIONA 27 OTRO")
+            #28
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1440,"y":250,"width":80,"height":100}):
+                if ganador == 28:
+                    print("FUNCIONA 28")
+                else:
+                    print("FUNCIONA 28 OTRO")
+            #29
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1440,"y":150,"width":80,"height":100}):
+                if ganador == 29:
+                    print("FUNCIONA 29")
+                else:
+                    print("FUNCIONA 29 OTRO")
+            #30
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1440,"y":50,"width":80,"height":100}):
+                if ganador == 30:
+                    print("FUNCIONA 30")
+                else:
+                    print("FUNCIONA 30 OTRO")
+            #31
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1520,"y":250,"width":80,"height":100}):
+                if ganador == 31:
+                    print("FUNCIONA 31")
+                else:
+                    print("FUNCIONA 31 OTRO")
+            #32
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1520,"y":150,"width":80,"height":100}):
+                if ganador == 32:
+                    print("FUNCIONA 32")
+                else:
+                    print("FUNCIONA 32 OTRO")
+            #33
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1520,"y":50,"width":80,"height":100}):
+                if ganador == 33:
+                    print("FUNCIONA 33")
+                else:
+                    print("FUNCIONA 33 OTRO")
+            #34
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1600,"y":250,"width":80,"height":100}):
+                if ganador == 34:
+                    print("FUNCIONA 34")
+                else:
+                    print("FUNCIONA 34 OTRO")
+            #35
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1600,"y":150,"width":80,"height":100}):
+                if ganador == 35:
+                    print("FUNCIONA 35")
+                else:
+                    print("FUNCIONA 35 OTRO")
+            #36
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1600,"y":50,"width":80,"height":100}):
+                if ganador == 36:
+                    print("FUNCIONA 36")
+                else:
+                    print("FUNCIONA 36 OTRO")

@@ -112,6 +112,7 @@ def app_run():
                 "A":str("acabar")
             }  
         }
+        ap.calculos_apuestas(ganador)
         d.historial.append(hist)
         actualizar_superficie()
         for i in range(0,len(d.jugadores)):
