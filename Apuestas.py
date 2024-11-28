@@ -456,36 +456,73 @@ def calculos_apuestas(ganador):
                     print("FUNCIONA 36 OTRO")
             #1º 12
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":710,"y":350,"width":320,"height":100}):
-                if ganador == 1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9 or 10 or 11 or 12:
+                if ganador == 1 or ganador == 2 or ganador == 3 or ganador == 4 or ganador == 5 or ganador == 6 or ganador == 7 or ganador == 8 or ganador == 9 or ganador == 10 or ganador == 11 or ganador == 12:
                     print("FUNCIONA 1º 12")
                 else:
                     print("FUNCIONA 1º 12 OTRO")
             #2º 12
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1030,"y":350,"width":320,"height":100}):
-                if ganador == 13 or 14 or 15 or 16 or 17 or 18 or 19 or 20 or 21 or 22 or 23 or 24:
+                if ganador == 13 or ganador == 14 or ganador == 15 or ganador == 16 or ganador == 17 or ganador == 18 or ganador == 19 or ganador == 20 or ganador == 21 or ganador == 22 or ganador == 23 or ganador == 24:
                     print("FUNCIONA 2º 12")
                 else:
                     print("FUNCIONA 2º 12 OTRO")
             #3º 12
             if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1350,"y":350,"width":320,"height":100}):
-                if ganador == 25 or 26 or 27 or 28 or 29 or 30 or 31 or 32 or 33 or 34 or 35 or 36:
+                if ganador == 25 or ganador == 26 or ganador == 27 or ganador == 28 or ganador == 29 or ganador == 30 or ganador == 31 or ganador == 32 or ganador == 33 or ganador == 34 or ganador ==35 or ganador ==36:
                     print("FUNCIONA 3º 12")
                 else:
                     print("FUNCIONA 3º 12 OTRO")
             #1º 2to1
-            
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1670,"y":250,"width":80,"height":100}):
+                if ganador == 1 or ganador == 4 or ganador == 7 or ganador == 10 or ganador == 13 or ganador == 16 or ganador == 19 or ganador == 22 or ganador == 25 or ganador == 28 or ganador == 31 or ganador == 34:
+                    print("FUNCIONA 1º 2to1")
+                else:
+                    print("FUNCIONA 1º 2to1 OTRO")
             #2º 2to1
-
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1670,"y":150,"width":80,"height":100}):
+                if ganador == 2 or ganador == 5 or ganador == 8 or ganador == 11 or ganador == 14 or ganador == 17 or ganador == 20 or ganador == 23 or ganador == 26 or ganador == 29 or ganador == 32 or ganador == 35:
+                    print("FUNCIONA 2º 2to1")
+                else:
+                    print("FUNCIONA 2º 2to1 OTRO")
             #3º 2to1
-
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1670,"y":50,"width":80,"height":100}):
+                if ganador == 3 or ganador == 6 or ganador == 9 or ganador == 12 or ganador == 15 or ganador == 18 or ganador == 21 or ganador == 24 or ganador == 27 or ganador == 30 or ganador == 33 or ganador == 36:
+                    print("FUNCIONA 3º 2to1")
+                else:
+                    print("FUNCIONA 3º 2to1 OTRO")
             #1to18
-
-            #19to36
-
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":710,"y":450,"width":160,"height":100}):
+                if ganador == 1 or ganador == 2 or ganador == 3 or ganador == 4 or ganador == 5 or ganador == 6 or ganador == 7 or ganador == 8 or ganador == 9 or ganador == 10 or ganador == 11 or ganador == 12 or ganador == 13 or ganador == 14 or ganador == 15 or ganador == 16 or ganador == 17 or ganador == 18:
+                    print("FUNCIONA 1to18")
+                else:
+                    print("FUNCIONA 1to18 OTRO")
             #Par
-
-            #Inpar
-
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":870,"y":450,"width":160,"height":100}):
+                if ganador == 2 or ganador == 4 or ganador == 6 or ganador == 8 or ganador == 10 or ganador == 12 or ganador == 14 or ganador == 16 or ganador == 18 or ganador == 20 or ganador == 22 or ganador == 24 or ganador == 26 or ganador == 28 or ganador == 30 or ganador == 32 or ganador == 34 or ganador == 36:
+                    print("FUNCIONA Even")
+                else:
+                    print("FUNCIONA Even OTRO")
             #Rojo
-
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1030,"y":450,"width":160,"height":100}):
+                if ganador == 1 or ganador == 3 or ganador == 5 or ganador == 7 or ganador == 9 or ganador == 12 or ganador == 14 or ganador == 16 or ganador == 18 or ganador == 19 or ganador == 21 or ganador == 23 or ganador == 25 or ganador == 27 or ganador == 30 or ganador == 32 or ganador == 34 or ganador == 36:
+                    print("FUNCIONA Rojo")
+                else:
+                    print("FUNCIONA Rojo OTRO")
             #Negro
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1190,"y":450,"width":160,"height":100}):
+                if ganador == 2 or ganador == 4 or ganador == 6 or ganador == 8 or ganador == 10 or ganador == 11 or ganador == 13 or ganador == 15 or ganador == 17 or ganador == 20 or ganador == 22 or ganador == 24 or ganador == 26 or ganador == 28 or ganador == 29 or ganador == 31 or ganador == 33 or ganador == 35:
+                    print("FUNCIONA Negro")
+                else:
+                    print("FUNCIONA Negro OTRO")
+            #Impar
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1350,"y":450,"width":160,"height":100}):
+                if ganador == 1 or ganador == 3 or ganador == 5 or ganador == 7 or ganador == 9 or ganador == 11 or ganador == 13 or ganador == 15 or ganador == 17 or ganador == 19 or ganador == 21 or ganador == 23 or ganador == 25 or ganador == 27 or ganador == 29 or ganador == 31 or ganador == 33 or ganador == 35:
+                    print("FUNCIONA Odd")
+                else:
+                    print("FUNCIONA Odd OTRO")
+            #19to36
+            if utils.is_point_in_rect({"x":fichas_dibujadas[i][i2]["x"],"y":fichas_dibujadas[i][i2]["y"]},{"x":1510,"y":450,"width":160,"height":100}):
+                if ganador == 19 or ganador == 20 or ganador == 21 or ganador == 22 or ganador == 23 or ganador == 24 or ganador == 25 or ganador == 26 or ganador == 27 or ganador == 28 or ganador == 29 or ganador == 30 or ganador == 31 or ganador == 32 or ganador == 33 or ganador == 34 or ganador == 35 or ganador == 36:
+                    print("FUNCIONA 19to36")
+                else:
+                    print("FUNCIONA 19to36 OTRO")
