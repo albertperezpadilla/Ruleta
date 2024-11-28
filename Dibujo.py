@@ -12,7 +12,7 @@ from Ruleta import ruleta, dibujar_ruleta, dibuar_boton_ruleta, dibujar_cuadro_g
 from Tablero import dibujar_tablero
 from Jugadores import dibujar_jugador, dibujar_turno_jug, distribuir_valores
 from Historial import dibujar_boton_historial, dibujar_historial, dibujar_scroll, actualizar_superficie
-from Apuestas import dibujar_ficha_apuestas, fichas_dibujadas, ultima_posicion_mouse
+import Apuestas as ap
 
 ultimo_angulo = 0
 ganador = ""
@@ -116,6 +116,10 @@ def app_run():
         actualizar_superficie()
         for i in range(0,len(d.jugadores)):
             distribuir_valores(d.jugadores[str(i)]["saldo"])
+        ap.fichas_naranja = []
+        ap.fichas_lila = []
+        ap.fichas_azul = []
+        ap.fichas_dibujadas = [ap.fichas_naranja, ap.fichas_lila, ap.fichas_azul]
         return ganador
 
     if d.mouse["pressed"] and utils.is_point_in_rect(d.mouse, d.boton_historial):
@@ -168,8 +172,7 @@ def app_draw():
             dibujar_boton_historial(False,d.RED)
             if len(d.historial) > 21:
                 dibujar_scroll()
-        dibujar_ficha_apuestas()
-        #print(fichas_dibujadas)
+        ap.dibujar_ficha_apuestas()
     # Actualitzar el dibuix a la finestra
     pygame.display.update()
 
