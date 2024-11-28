@@ -7,7 +7,7 @@ def dibujar_ficha_apuestas():
     #NARANJA
     if d.turno_jug == 0:
         #100
-        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_naranja100,22):
+        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_naranja100,22) and not d.arrastrando_ficha_naranja100 and not d.arrastrando_ficha_naranja50 and not d.arrastrando_ficha_naranja20 and not d.arrastrando_ficha_naranja10 and not d.arrastrando_ficha_naranja5:
             d.arrastrando_ficha_naranja100 = True
         if not d.mouse["pressed"]:
             d.arrastrando_ficha_naranja100 = False
@@ -15,7 +15,7 @@ def dibujar_ficha_apuestas():
             dibujar_ficha(d.mouse["x"],d.mouse["y"],"100",d.jugadores["0"]["color"]["1"],d.jugadores["0"]["color"]["2"])
 
         #50
-        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_naranja50,22):
+        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_naranja50,22) and not d.arrastrando_ficha_naranja100 and not d.arrastrando_ficha_naranja50 and not d.arrastrando_ficha_naranja20 and not d.arrastrando_ficha_naranja10 and not d.arrastrando_ficha_naranja5:
             d.arrastrando_ficha_naranja50 = True
         if not d.mouse["pressed"]:
             d.arrastrando_ficha_naranja50 = False
@@ -23,7 +23,7 @@ def dibujar_ficha_apuestas():
             dibujar_ficha(d.mouse["x"],d.mouse["y"],"50",d.jugadores["0"]["color"]["1"],d.jugadores["0"]["color"]["2"])
 
         #20
-        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_naranja20,22):
+        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_naranja20,22) and not d.arrastrando_ficha_naranja100 and not d.arrastrando_ficha_naranja50 and not d.arrastrando_ficha_naranja20 and not d.arrastrando_ficha_naranja10 and not d.arrastrando_ficha_naranja5:
             d.arrastrando_ficha_naranja20 = True
         if not d.mouse["pressed"]:
             d.arrastrando_ficha_naranja20 = False
@@ -31,7 +31,7 @@ def dibujar_ficha_apuestas():
             dibujar_ficha(d.mouse["x"],d.mouse["y"],"20",d.jugadores["0"]["color"]["1"],d.jugadores["0"]["color"]["2"])
 
         #10
-        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_naranja10,22):
+        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_naranja10,22) and not d.arrastrando_ficha_naranja100 and not d.arrastrando_ficha_naranja50 and not d.arrastrando_ficha_naranja20 and not d.arrastrando_ficha_naranja10 and not d.arrastrando_ficha_naranja5:
             d.arrastrando_ficha_naranja10 = True
         if not d.mouse["pressed"]:
             d.arrastrando_ficha_naranja10 = False
@@ -39,7 +39,7 @@ def dibujar_ficha_apuestas():
             dibujar_ficha(d.mouse["x"],d.mouse["y"],"10",d.jugadores["0"]["color"]["1"],d.jugadores["0"]["color"]["2"])
 
         #5
-        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_naranja5,22):
+        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_naranja5,22) and not d.arrastrando_ficha_naranja100 and not d.arrastrando_ficha_naranja50 and not d.arrastrando_ficha_naranja20 and not d.arrastrando_ficha_naranja10 and not d.arrastrando_ficha_naranja5:
             d.arrastrando_ficha_naranja5 = True
         if not d.mouse["pressed"]:
             d.arrastrando_ficha_naranja5 = False
@@ -49,7 +49,7 @@ def dibujar_ficha_apuestas():
     #LILA
     if d.turno_jug == 1:
         #100
-        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_lila100,22):
+        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_lila100,22) and not d.arrastrando_ficha_lila100 and not d.arrastrando_ficha_lila50 and not d.arrastrando_ficha_lila20 and not d.arrastrando_ficha_lila10 and not d.arrastrando_ficha_lila5:
             d.arrastrando_ficha_lila100 = True
         if not d.mouse["pressed"]:
             d.arrastrando_ficha_lila100 = False
@@ -57,7 +57,7 @@ def dibujar_ficha_apuestas():
             dibujar_ficha(d.mouse["x"],d.mouse["y"],"100",d.jugadores["1"]["color"]["1"],d.jugadores["1"]["color"]["2"])
 
         #50
-        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_lila50,22):
+        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_lila50,22) and not d.arrastrando_ficha_lila100 and not d.arrastrando_ficha_lila50 and not d.arrastrando_ficha_lila20 and not d.arrastrando_ficha_lila10 and not d.arrastrando_ficha_lila5:
             d.arrastrando_ficha_lila50 = True
         if not d.mouse["pressed"]:
             d.arrastrando_ficha_lila50 = False
@@ -65,7 +65,7 @@ def dibujar_ficha_apuestas():
             dibujar_ficha(d.mouse["x"],d.mouse["y"],"50",d.jugadores["1"]["color"]["1"],d.jugadores["1"]["color"]["2"])
 
         #20
-        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_lila20,22):
+        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_lila20,22) and not d.arrastrando_ficha_lila100 and not d.arrastrando_ficha_lila50 and not d.arrastrando_ficha_lila20 and not d.arrastrando_ficha_lila10 and not d.arrastrando_ficha_lila5:
             d.arrastrando_ficha_lila20 = True
         if not d.mouse["pressed"]:
             d.arrastrando_ficha_lila20 = False
@@ -73,7 +73,7 @@ def dibujar_ficha_apuestas():
             dibujar_ficha(d.mouse["x"],d.mouse["y"],"20",d.jugadores["1"]["color"]["1"],d.jugadores["1"]["color"]["2"])
 
         #10     
-        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_lila10,22):
+        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_lila10,22) and not d.arrastrando_ficha_lila100 and not d.arrastrando_ficha_lila50 and not d.arrastrando_ficha_lila20 and not d.arrastrando_ficha_lila10 and not d.arrastrando_ficha_lila5:
             d.arrastrando_ficha_lila10 = True
         if not d.mouse["pressed"]:
             d.arrastrando_ficha_lila10 = False
@@ -81,7 +81,7 @@ def dibujar_ficha_apuestas():
             dibujar_ficha(d.mouse["x"],d.mouse["y"],"10",d.jugadores["1"]["color"]["1"],d.jugadores["1"]["color"]["2"])
 
         #5
-        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_lila5,22):
+        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_lila5,22) and not d.arrastrando_ficha_lila100 and not d.arrastrando_ficha_lila50 and not d.arrastrando_ficha_lila20 and not d.arrastrando_ficha_lila10 and not d.arrastrando_ficha_lila5:
             d.arrastrando_ficha_lila5 = True
         if not d.mouse["pressed"]:
             d.arrastrando_ficha_lila5 = False
@@ -91,7 +91,7 @@ def dibujar_ficha_apuestas():
     #AZUL
     if d.turno_jug == 2:
         #100
-        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_azul100,22):
+        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_azul100,22) and not d.arrastrando_ficha_azul100 and not d.arrastrando_ficha_azul50 and not d.arrastrando_ficha_azul20 and not d.arrastrando_ficha_azul10 and not d.arrastrando_ficha_azul5:
             d.arrastrando_ficha_azul100 = True
         if not d.mouse["pressed"]:
             d.arrastrando_ficha_azul100 = False
@@ -99,7 +99,7 @@ def dibujar_ficha_apuestas():
             dibujar_ficha(d.mouse["x"],d.mouse["y"],"100",d.jugadores["2"]["color"]["1"],d.jugadores["2"]["color"]["2"])
 
         #50
-        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_azul50,22):
+        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_azul50,22) and not d.arrastrando_ficha_azul100 and not d.arrastrando_ficha_azul50 and not d.arrastrando_ficha_azul20 and not d.arrastrando_ficha_azul10 and not d.arrastrando_ficha_azul5:
             d.arrastrando_ficha_azul50 = True
         if not d.mouse["pressed"]:
             d.arrastrando_ficha_azul50 = False
@@ -107,7 +107,7 @@ def dibujar_ficha_apuestas():
             dibujar_ficha(d.mouse["x"],d.mouse["y"],"50",d.jugadores["2"]["color"]["1"],d.jugadores["2"]["color"]["2"])
 
         #20
-        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_azul20,22):
+        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_azul20,22) and not d.arrastrando_ficha_azul100 and not d.arrastrando_ficha_azul50 and not d.arrastrando_ficha_azul20 and not d.arrastrando_ficha_azul10 and not d.arrastrando_ficha_azul5:
             d.arrastrando_ficha_azul20 = True
         if not d.mouse["pressed"]:
             d.arrastrando_ficha_azul20 = False
@@ -115,7 +115,7 @@ def dibujar_ficha_apuestas():
             dibujar_ficha(d.mouse["x"],d.mouse["y"],"20",d.jugadores["2"]["color"]["1"],d.jugadores["2"]["color"]["2"])
 
         #10     
-        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_azul10,22):
+        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_azul10,22) and not d.arrastrando_ficha_azul100 and not d.arrastrando_ficha_azul50 and not d.arrastrando_ficha_azul20 and not d.arrastrando_ficha_azul10 and not d.arrastrando_ficha_azul5:
             d.arrastrando_ficha_azul10 = True
         if not d.mouse["pressed"]:
             d.arrastrando_ficha_azul10 = False
@@ -123,7 +123,7 @@ def dibujar_ficha_apuestas():
             dibujar_ficha(d.mouse["x"],d.mouse["y"],"10",d.jugadores["2"]["color"]["1"],d.jugadores["2"]["color"]["2"])
 
         #5
-        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_azul5,22):
+        if d.mouse["pressed"] and utils.is_point_in_circle(d.mouse,d.pos_fichas_azul5,22) and not d.arrastrando_ficha_azul100 and not d.arrastrando_ficha_azul50 and not d.arrastrando_ficha_azul20 and not d.arrastrando_ficha_azul10 and not d.arrastrando_ficha_azul5:
             d.arrastrando_ficha_azul5 = True
         if not d.mouse["pressed"]:
             d.arrastrando_ficha_azul5 = False
