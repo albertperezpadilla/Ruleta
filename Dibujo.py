@@ -107,9 +107,9 @@ def app_run():
                 "A":str(d.jugadores["2"]["saldo"]["total"])
             },
             "apuesta":{
-                "N":str("acabar"),
-                "L":str("acabar"),
-                "A":str("acabar")
+                "N":str(ap.total_apuesta(0)),
+                "L":str(ap.total_apuesta(1)),
+                "A":str(ap.total_apuesta(2))
             }  
         }
         ap.calculos_apuestas(ganador)

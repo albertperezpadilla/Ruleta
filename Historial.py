@@ -94,4 +94,3 @@ def dibujar_boton_historial(texto,color):
         texto_rect = texto.get_rect()
         texto_rect.center = (300,775)
         d.screen.blit(texto, texto_rect)
-        
