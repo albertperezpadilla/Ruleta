@@ -98,6 +98,7 @@ def app_run():
         ganador, ultimo_angulo = ruleta(ultimo_angulo)
         turno += 1
         d.turno_jug = 0
+        ap.calculos_apuestas(ganador)
         hist = {
             "turno":str(turno),
             "resultado":str(ganador),
@@ -112,7 +113,6 @@ def app_run():
                 "A":str(ap.total_apuesta(2))
             }  
         }
-        ap.calculos_apuestas(ganador)
         d.historial.append(hist)
         actualizar_superficie()
         for i in range(0,len(d.jugadores)):
