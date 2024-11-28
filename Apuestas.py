@@ -16,7 +16,7 @@ def dibujar_ficha_apuestas():
             d.arrastrando_ficha_naranja100 = True
         if not d.mouse["pressed"]:
             punto = (ultima_posicion_mouse["x"], ultima_posicion_mouse["y"])
-            if d.arrastrando_ficha_naranja100 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)):
+            if d.arrastrando_ficha_naranja100 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)) and punto not in d.centros_tablero:
                 fichas_naranja.append({"x": ultima_posicion_mouse["x"], "y": ultima_posicion_mouse["y"], "valor": "100", "color": d.jugadores["0"]["color"]["1"], "color2": d.jugadores["0"]["color"]["2"],})
                 d.jugadores["0"]["saldo"]["100"] -= 1
             d.arrastrando_ficha_naranja100 = False
@@ -30,7 +30,7 @@ def dibujar_ficha_apuestas():
             d.arrastrando_ficha_naranja50 = True
         if not d.mouse["pressed"]:
             punto = (ultima_posicion_mouse["x"], ultima_posicion_mouse["y"])
-            if d.arrastrando_ficha_naranja50 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)):
+            if d.arrastrando_ficha_naranja50 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)) and punto not in d.centros_tablero:
                 fichas_naranja.append({"x": ultima_posicion_mouse["x"], "y": ultima_posicion_mouse["y"], "valor": "50", "color": d.jugadores["0"]["color"]["1"], "color2": d.jugadores["0"]["color"]["2"],})
                 d.jugadores["0"]["saldo"]["50"] -= 1
             d.arrastrando_ficha_naranja50 = False
@@ -44,7 +44,7 @@ def dibujar_ficha_apuestas():
             d.arrastrando_ficha_naranja20 = True
         if not d.mouse["pressed"]:
             punto = (ultima_posicion_mouse["x"], ultima_posicion_mouse["y"])
-            if d.arrastrando_ficha_naranja20 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)):
+            if d.arrastrando_ficha_naranja20 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)) and punto not in d.centros_tablero:
                 fichas_naranja.append({"x": ultima_posicion_mouse["x"], "y": ultima_posicion_mouse["y"], "valor": "20", "color": d.jugadores["0"]["color"]["1"], "color2": d.jugadores["0"]["color"]["2"],})
                 d.jugadores["0"]["saldo"]["20"] -= 1
             d.arrastrando_ficha_naranja20 = False
@@ -58,7 +58,7 @@ def dibujar_ficha_apuestas():
             d.arrastrando_ficha_naranja10 = True
         if not d.mouse["pressed"]:
             punto = (ultima_posicion_mouse["x"], ultima_posicion_mouse["y"])
-            if d.arrastrando_ficha_naranja10 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)):
+            if d.arrastrando_ficha_naranja10 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)) and punto not in d.centros_tablero:
                 fichas_naranja.append({"x": ultima_posicion_mouse["x"], "y": ultima_posicion_mouse["y"], "valor": "10", "color": d.jugadores["0"]["color"]["1"], "color2": d.jugadores["0"]["color"]["2"],})
                 d.jugadores["0"]["saldo"]["10"] -= 1
             d.arrastrando_ficha_naranja10 = False
@@ -72,7 +72,7 @@ def dibujar_ficha_apuestas():
             d.arrastrando_ficha_naranja5 = True
         if not d.mouse["pressed"]:
             punto = (ultima_posicion_mouse["x"], ultima_posicion_mouse["y"])
-            if d.arrastrando_ficha_naranja5 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)):
+            if d.arrastrando_ficha_naranja5 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)) and punto not in d.centros_tablero:
                 fichas_naranja.append({"x": ultima_posicion_mouse["x"], "y": ultima_posicion_mouse["y"], "valor": "5", "color": d.jugadores["0"]["color"]["1"], "color2": d.jugadores["0"]["color"]["2"],})
                 d.jugadores["0"]["saldo"]["5"] -= 1
             d.arrastrando_ficha_naranja5 = False
@@ -88,7 +88,7 @@ def dibujar_ficha_apuestas():
             d.arrastrando_ficha_lila100 = True
         if not d.mouse["pressed"]:
             punto = (ultima_posicion_mouse["x"], ultima_posicion_mouse["y"])
-            if d.arrastrando_ficha_lila100 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)):
+            if d.arrastrando_ficha_lila100 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)) and punto not in d.centros_tablero:
                 fichas_lila.append({"x": ultima_posicion_mouse["x"], "y": ultima_posicion_mouse["y"], "valor": "100", "color": d.jugadores["1"]["color"]["1"], "color2": d.jugadores["1"]["color"]["2"],})
                 d.jugadores["1"]["saldo"]["100"] -= 1
             d.arrastrando_ficha_lila100 = False
@@ -102,7 +102,7 @@ def dibujar_ficha_apuestas():
             d.arrastrando_ficha_lila50 = True
         if not d.mouse["pressed"]:
             punto = (ultima_posicion_mouse["x"], ultima_posicion_mouse["y"])
-            if d.arrastrando_ficha_lila50 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)):
+            if d.arrastrando_ficha_lila50 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)) and punto not in d.centros_tablero:
                 fichas_lila.append({"x": ultima_posicion_mouse["x"], "y": ultima_posicion_mouse["y"], "valor": "50", "color": d.jugadores["1"]["color"]["1"], "color2": d.jugadores["1"]["color"]["2"],})
                 d.jugadores["1"]["saldo"]["50"] -= 1
             d.arrastrando_ficha_lila50 = False
@@ -116,7 +116,7 @@ def dibujar_ficha_apuestas():
             d.arrastrando_ficha_lila20 = True
         if not d.mouse["pressed"]:
             punto = (ultima_posicion_mouse["x"], ultima_posicion_mouse["y"])
-            if d.arrastrando_ficha_lila20 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)):
+            if d.arrastrando_ficha_lila20 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)) and punto not in d.centros_tablero:
                 fichas_lila.append({"x": ultima_posicion_mouse["x"], "y": ultima_posicion_mouse["y"], "valor": "20", "color": d.jugadores["1"]["color"]["1"], "color2": d.jugadores["1"]["color"]["2"],})
                 d.jugadores["1"]["saldo"]["20"] -= 1
             d.arrastrando_ficha_lila20 = False
@@ -130,7 +130,7 @@ def dibujar_ficha_apuestas():
             d.arrastrando_ficha_lila10 = True
         if not d.mouse["pressed"]:
             punto = (ultima_posicion_mouse["x"], ultima_posicion_mouse["y"])
-            if d.arrastrando_ficha_lila10 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)):
+            if d.arrastrando_ficha_lila10 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)) and punto not in d.centros_tablero:
                 fichas_lila.append({"x": ultima_posicion_mouse["x"], "y": ultima_posicion_mouse["y"], "valor": "10", "color": d.jugadores["1"]["color"]["1"], "color2": d.jugadores["1"]["color"]["2"],})
                 d.jugadores["1"]["saldo"]["10"] -= 1
             d.arrastrando_ficha_lila10 = False
@@ -144,7 +144,7 @@ def dibujar_ficha_apuestas():
             d.arrastrando_ficha_lila5 = True
         if not d.mouse["pressed"]:
             punto = (ultima_posicion_mouse["x"], ultima_posicion_mouse["y"])
-            if d.arrastrando_ficha_lila5 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)):
+            if d.arrastrando_ficha_lila5 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)) and punto not in d.centros_tablero:
                 fichas_lila.append({"x": ultima_posicion_mouse["x"], "y": ultima_posicion_mouse["y"], "valor": "5", "color": d.jugadores["1"]["color"]["1"], "color2": d.jugadores["1"]["color"]["2"],})
                 d.jugadores["1"]["saldo"]["5"] -= 1
             d.arrastrando_ficha_lila5 = False
@@ -160,7 +160,7 @@ def dibujar_ficha_apuestas():
             d.arrastrando_ficha_azul100 = True
         if not d.mouse["pressed"]:
             punto = (ultima_posicion_mouse["x"], ultima_posicion_mouse["y"])
-            if d.arrastrando_ficha_azul100 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)):
+            if d.arrastrando_ficha_azul100 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)) and punto not in d.centros_tablero:
                 fichas_azul.append({"x": ultima_posicion_mouse["x"], "y": ultima_posicion_mouse["y"], "valor": "100", "color": d.jugadores["2"]["color"]["1"], "color2": d.jugadores["2"]["color"]["2"],})
                 d.jugadores["2"]["saldo"]["100"] -= 1
             d.arrastrando_ficha_azul100 = False
@@ -174,7 +174,7 @@ def dibujar_ficha_apuestas():
             d.arrastrando_ficha_azul50 = True
         if not d.mouse["pressed"]:
             punto = (ultima_posicion_mouse["x"], ultima_posicion_mouse["y"])
-            if d.arrastrando_ficha_azul50 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)):
+            if d.arrastrando_ficha_azul50 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)) and punto not in d.centros_tablero:
                 fichas_azul.append({"x": ultima_posicion_mouse["x"], "y": ultima_posicion_mouse["y"], "valor": "50", "color": d.jugadores["2"]["color"]["1"], "color2": d.jugadores["2"]["color"]["2"],})
                 d.jugadores["2"]["saldo"]["50"] -= 1
             d.arrastrando_ficha_azul50 = False
@@ -188,7 +188,7 @@ def dibujar_ficha_apuestas():
             d.arrastrando_ficha_azul20 = True
         if not d.mouse["pressed"]:
             punto = (ultima_posicion_mouse["x"], ultima_posicion_mouse["y"])
-            if d.arrastrando_ficha_azul20 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)):
+            if d.arrastrando_ficha_azul20 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)) and punto not in d.centros_tablero:
                 fichas_azul.append({"x": ultima_posicion_mouse["x"], "y": ultima_posicion_mouse["y"], "valor": "20", "color": d.jugadores["2"]["color"]["1"], "color2": d.jugadores["2"]["color"]["2"],})
                 d.jugadores["2"]["saldo"]["20"] -= 1
             d.arrastrando_ficha_azul20 = False
@@ -202,7 +202,7 @@ def dibujar_ficha_apuestas():
             d.arrastrando_ficha_azul10 = True
         if not d.mouse["pressed"]:
             punto = (ultima_posicion_mouse["x"], ultima_posicion_mouse["y"])
-            if d.arrastrando_ficha_azul10 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)):
+            if d.arrastrando_ficha_azul10 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)) and punto not in d.centros_tablero:
                 fichas_azul.append({"x": ultima_posicion_mouse["x"], "y": ultima_posicion_mouse["y"], "valor": "10", "color": d.jugadores["2"]["color"]["1"], "color2": d.jugadores["2"]["color"]["2"],})
                 d.jugadores["2"]["saldo"]["10"] -= 1
             d.arrastrando_ficha_azul10 = False
@@ -216,7 +216,7 @@ def dibujar_ficha_apuestas():
             d.arrastrando_ficha_azul5 = True
         if not d.mouse["pressed"]:
             punto = (ultima_posicion_mouse["x"], ultima_posicion_mouse["y"])
-            if d.arrastrando_ficha_azul5 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)):
+            if d.arrastrando_ficha_azul5 and (utils.is_point_in_polygon(punto, d.puntos_tablero) or utils.is_point_in_polygon(punto, d.puntos_0)) and punto not in d.centros_tablero:
                 fichas_azul.append({"x": ultima_posicion_mouse["x"], "y": ultima_posicion_mouse["y"], "valor": "5", "color": d.jugadores["2"]["color"]["1"], "color2": d.jugadores["2"]["color"]["2"],})
                 d.jugadores["2"]["saldo"]["5"] -= 1
             d.arrastrando_ficha_azul5 = False

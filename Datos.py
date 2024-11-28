@@ -266,3 +266,18 @@ pos_fichas_azul5 = {
     "y": pos_fichas_azul[4][1]
 }
 arrastrando_ficha_azul5 = False
+
+centros_tablero = []
+pos_y = 50
+for i in range(4):
+    pos_x = 710
+    for i in range(14):
+        centros_tablero.append((pos_x,pos_y))
+        pos_x += 80
+    pos_y += 100
+pos_y = 450
+for i in range(2):
+    pos_x = 710
+    for i in range(4):
+        centros_tablero.append((pos_x,pos_y))
+    pos_y += 100
